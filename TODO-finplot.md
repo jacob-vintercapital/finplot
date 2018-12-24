@@ -19,10 +19,13 @@ kör lite bredare streck i vissa grafer
 
 # next: before irl meeting
 
+## on other account 
+
+make the latest branch the master branch 
+
 ## pull on clinux
 
 - delete everthing in /output/ that is not in a folder 
-- rename py2/ to py/
 - create sns plots and upload to github 
 
 ## dead coins

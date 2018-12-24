@@ -12,6 +12,7 @@ from pandas.tseries.offsets import *
 import matplotlib.pyplot as plt
 import matplotlib.backends as pltb
 from bokeh import *
+import seaborn as sns
 
 # test ggplot
 # http://ggplot.yhathq.com/install.html
@@ -29,5 +30,4 @@ import statsmodels.api as sm
 import scipy.stats as stats
 
 # options
-save_large_png = False
 pd.options.display.max_rows = 20
