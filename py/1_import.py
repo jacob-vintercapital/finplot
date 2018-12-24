@@ -9,15 +9,9 @@ saves the imported objects in memory as pandas dataframes.
 START1 = '2015-04'
 END1 = '2018-04'
 
-
 ## working dir
 
-pc = True
-if pc:
-    # os.chdir('C:\Users\n485800\Documents\spyderw\crinfu')
-    # os.chdir('C:\Users\n485800\Documents\spyderw\crinfu')
-    # os.chdir('C:\\Users\\n485800\\Documents\\spyderw\\crinfu')
-    print(os.getcwd())
+print("work dir", os.getcwd())
 
 ## f() date as index
 

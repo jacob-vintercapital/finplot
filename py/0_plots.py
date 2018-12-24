@@ -2,6 +2,10 @@
 this file contains the plotting defaults used
 '''
 
+## save vip plots with extra quality
+
+save_large_png = False
+
 ## styles
 
 plt.style.available
@@ -15,9 +19,10 @@ plt.style.use('seaborn-colorblind') # use this one with gray background
 # as of 17 dec i like seaborn-pastel and seaborn-colorblind but the colorblind need some alpha in it i think.
 # need to ensure it is ok to print it also.
 
-## choice A
+## choices
 
 CUSTOM_A = True
+CUSTOM_B = False
 
 if CUSTOM_A:
 
@@ -26,10 +31,6 @@ if CUSTOM_A:
 
   # todo make below work
   #plt.rcParams["scatter.marker"] = 'o'
-
-## custom choice B
-
-CUSTOM_B = False
 
 if CUSTOM_B:
 
