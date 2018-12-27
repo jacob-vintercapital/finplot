@@ -165,9 +165,9 @@ retmat1_rollbeta
 
 ## Weights
 
-Weight in alt coins increase and weight in BTC decrease. A lower cap decrease the weight in BTC even more, which adds a 
+A lower cap value, e.g. 30% instead of 50%,   decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.
 
-![Imposing weight caps and floors change the basket weights. ](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
+![Stacked area chart of weight difference between a regular market capitalization weighted top 10 basket, versus imposing weight caps and floors that change the basket weights. Imposing caps and floors change the basket weight, on the y-axis we see how large this effect is. The colors represent an asset, and clearly ETH is most affected, followed by XRP and LTC - the reason for this is the historical dominance of BTC, because with a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast - it can go from 0.2% to 2% which is a 10x increase, but in absolute terms the changes are small and are thus not seen clearly in this graph.](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
 
 w1_alts.png
 w4_alts.png
