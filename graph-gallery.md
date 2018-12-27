@@ -2,7 +2,17 @@
 title: Graph Gallery
 description: Contain the important graphs, arranged by topic and incl. comments/explanations
 created: 2018-12-19
+author: Vinter Capital
+numbersections: true
+toc: true
 ---
+
+# TODO
+
+this section describes what i need to do.
+
+there are errors in the files. you cannot point to /jl/Documents/crinfu/output because some are wrong e.g. turnover_1 is not at all what it should be.
+solve this by running code in pycharm on clinux to get the correct output.
 
 # Theory
 
@@ -165,9 +175,15 @@ retmat1_rollbeta
 
 ## Weights
 
+### caps and floors
+
+The defintion for caps and floors are found in the theory section.
+
+![Stacked area chart of weight difference between on one hand a regular market capitalization weighted top 10 basket, versus on the other hand imposing weight caps and floors.    This graph answer the question: How does the weight in each asset change when weight caps and floors are imposed?  On the y-axis we see how large this effect is. The colors represent an asset - clearly ETH is most affected, followed by XRP and LTC. The reason for this is the historical dominance of BTC well above 50%. With a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast (it can go from 0.2% to 2% which is a 10x increase) but in absolute terms the changes are small and are thus not seen clearly in this graph.](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
+
 A lower cap value, e.g. 30% instead of 50%,   decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.
 
-![Stacked area chart of weight difference between a regular market capitalization weighted top 10 basket, versus imposing weight caps and floors that change the basket weights. Imposing caps and floors change the basket weight, on the y-axis we see how large this effect is. The colors represent an asset, and clearly ETH is most affected, followed by XRP and LTC - the reason for this is the historical dominance of BTC, because with a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast - it can go from 0.2% to 2% which is a 10x increase, but in absolute terms the changes are small and are thus not seen clearly in this graph.](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
+### some files
 
 w1_alts.png
 w4_alts.png
@@ -175,7 +191,26 @@ w4_alts.png
 w4-1m_alts.png
 w1_area.png
 
+### fraction of market cap
+
+This graph answer the question:
+
+> How much closer to the "total" market is a top 10 compared to a top 5 basket?
+
+The fraction of total market capitalzation for a certain basket is defined as the market capitalzation of the assets in the basket, divided by the total market capitalzation. (To get smoother lines a 20 day mean is imposed in the graph.) In order to be logically consistent and practical, we define the total market as a basket with 200 assets weighted by market capitalzation.
+
+![A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less.     Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.](/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png)
+
+
+> stylish question: is it better to put everything in the caption, or is it better to
+
 ### Turnover on rebalancing date
+
+
+
+> What is the turnover in small assets?
+
+![this fig is incorrect. see todo section.](/home/he2/Documents/crinfu/output/bsk/wei/turnover_1.png)
 
 ## Correlation matrix
 
