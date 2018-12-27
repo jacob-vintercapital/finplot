@@ -4,50 +4,140 @@ description: Contain the important graphs, arranged by topic and incl. comments/
 created: 2018-12-19
 ---
 
-# Theory 
+# Theory
 
-For those accustomed to time series analysis and reading financial charts, this section is not needed. For everyone else, this section provides a point of reference - similar to a glossary. 
+For those accustomed to time series analysis and reading financial charts, this section is not needed. For everyone else, this section provides a point of reference - similar to a glossary.
 
-## Prices 
+## Prices
 
-## Returns 
+## Returns
 
-## Mean 
+## Weights
 
-## Volatility 
+## Volatility
 
-## Correlation 
+## Correlation
 
-## Autocorrelation 
+## Autocorrelation
 
-## Rolling window
+## Rolling windowkeyboard
 
 todo insert plot from my su thesis
 
-If you have data from day 1 to day 1000, you can split it up into rolling time period of 100 days so that the first windows is day 1 to 100, the second window is day 2 to 101, and so on. 
+If you have data from day 1 to day 1000, you can split it up into rolling time period of 100 days so that the first windows is day 1 to 100, the second window is day 2 to 101, and so on.
 
-Using these windows, each of which contain 100 days, we can then compute a statistic such as the mean price for each window. By plotting the mean price on the y-axis and the window's end date on the x-axis, we can see how the mean changed depending on the data that is used. 
+Using these windows, each of which contain 100 days, we can then compute a statistic such as the mean price for each window. By plotting the mean price on the y-axis and the window's end date on the x-axis, we can see how the mean changed depending on the data that is used.
 
 Another feature of rolling windows is to smooth data that is volatile, so that the lines in a graph are smoother.
 
 
-# Description of digital assets 
+## Weight caps and floors
+
+With a cap, the weight of asset get modified from `w'` to
+`w = max(w', weight cap)`.
+With a weight floor, the weight of asset get modified from `w'` to
+`w = min(w', weight floor)`.
+
+A weight cap can reduce the weight in large assets, and a weight floors can increase the weight in small assets. Large and small, in tis contect, refer to the market capitalization of the asset.
+
+When a weight cap is imposed, the "removed" weights must be redistributed so that the weights sum to 100%. For example, if BTC has weight 55% according to its market capitalization, and a basket has a weight cap of 30%, then 25% weight is removed from the basked and that must be redistributed to other assets somehow.
+Vinter Capital achieve this by taking the removed weight (e.g. 25%) and allocating it to all other assets in the basket, according to their previous weight.
+
+The assets whose weights change when a weight floor is imposed get an increased weight.  When a weight floor is imposed, the "added" weights must be taken from somewhere so that the weights sum to 100%. For example, if the tenth asset has a market capitalization so that its weight is 0.6% and we impose a weight floor of 1% then the extra 0.4% has to come from somewhere - otherwise the index weights sum to 100.4%.
+Vinter Capital achieve this by stealing the added weight (e.g. 0.4%) from all other assets in the basket, except those who have been affected from the cap.
+
+
+# Files
+
+```
+/home/he2/Documents/crinfu/output/vcc/vol/volfr_vcc_bsk1_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/volfr_vcc_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/vol_vcc_bsk1_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/vol_vcc_smooth20.png
+
+/home/he2/Documents/crinfu/output/vcc/ret/price-fund_vs_coins.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios_2.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_t5.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_tkr3_market.png
+/home/he2/Documents/crinfu/output/vcc/ret/retvol_scatter_text.png
+/home/he2/Documents/crinfu/output/vcc/ret/total_marketcap.png
+/home/he2/Documents/crinfu/output/vcc/ret/vcc-rollcorr-t5_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/ret/vcc-rollcorr-t10_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/ret/woobull.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios.csv
+
+/home/he2/Documents/crinfu/output/vcc/mca/mca_vcc.png
+/home/he2/Documents/crinfu/output/vcc/mca/mca_vcc_bsk1.png
+
+/home/he2/Documents/crinfu/output/bsk/wei/capsweight floors_effect_1_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/capsweight floors_effect_1_BTC.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches1.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches1minus4.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches4.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches8.png
+/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png
+/home/he2/Documents/crinfu/output/bsk/wei/smoothing_w1.png
+/home/he2/Documents/crinfu/output/bsk/wei/turnover_1.png
+/home/he2/Documents/crinfu/output/bsk/wei/turnover_2.png
+/home/he2/Documents/crinfu/output/bsk/wei/volume_5vs10_1.png
+/home/he2/Documents/crinfu/output/bsk/wei/w1_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w1_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4-1m_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4-w1_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/wd1_tkr_insouts_mostwei.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches_bsk1.txt
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches_bsk1_minus_bsk4.txt
+/home/he2/Documents/crinfu/output/bsk/wei/member_sum_wei_t5-wm-rm.txt
+/home/he2/Documents/crinfu/output/bsk/wei/member_sum_wei_t10-wm-rm.txt
+/home/he2/Documents/crinfu/output/bsk/wei/nrof_coinsw_w1.csv
+/home/he2/Documents/crinfu/output/bsk/wei/smoothing_1.csv
+/home/he2/Documents/crinfu/output/bsk/wei/tkr_insouts_mostwei_sum.csv
+/home/he2/Documents/crinfu/output/bsk/wei/w4_minusw_1m_mean.csv
+/home/he2/Documents/crinfu/output/bsk/wei/wd_mean.txt
+/home/he2/Documents/crinfu/output/bsk/wei/wei_mthly_t5-wm-rm.csv
+/home/he2/Documents/crinfu/output/bsk/wei/wei_mthly_t10-wm-rm.csv
+/home/he2/Documents/crinfu/output/bsk/wei/w smooth minus w raw, abs(mean()).csv
+
+/home/he2/Documents/crinfu/output/bsk/ret/ACF_bsk1.png
+/home/he2/Documents/crinfu/output/bsk/ret/ACF_btc.png
+/home/he2/Documents/crinfu/output/bsk/ret/bsk-rollcorr-1.png
+/home/he2/Documents/crinfu/output/bsk/ret/contribution_bsk1.png
+/home/he2/Documents/crinfu/output/bsk/ret/contribution_bsk4.png
+/home/he2/Documents/crinfu/output/bsk/ret/qqplot_BTC.png
+/home/he2/Documents/crinfu/output/bsk/ret/qqplot_market.png
+/home/he2/Documents/crinfu/output/bsk/ret/ret_dens_market.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_box.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rollbeta.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rolling_sharpe_1.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rollvol.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_beta.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_descr_interval.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_risk.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_yearly_mean.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_yearly_vol.csv
+```
+
+
+# Description of digital assets
 
 ## Prices
 
 pri_t5
 
-## Market cap 
+## Market cap
 
-total_marketcap 
+total_marketcap
 
-## Returns 
+## Returns
 
 qqplot_market
 qqplot_BTC
 
 
-# Description and comparison of indices 
+# Description and comparison of indices
 
 ## Prices
 
@@ -60,12 +150,12 @@ contribution_bsk4
 
 retmat1_box
 
-## Risk & returns 
+## Risk & returns
 
 retvol_scatter_text
- 
 
-## Risk & return  
+
+## Risk & return
 
 retmat1_rollvol
 
@@ -73,8 +163,11 @@ retmat1_rolling_sharpe_1
 
 retmat1_rollbeta
 
-## Weights 
+## Weights
 
+Weight in alt coins increase and weight in BTC decrease. A lower cap decrease the weight in BTC even more, which adds a 
+
+![Imposing weight caps and floors change the basket weights. ](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
 
 w1_alts.png
 w4_alts.png
@@ -82,24 +175,24 @@ w4_alts.png
 w4-1m_alts.png
 w1_area.png
 
-### Turnover on rebalancing date 
+### Turnover on rebalancing date
 
-## Correlation matrix 
+## Correlation matrix
 
-## Rolling correlation 
+## Rolling correlation
 
-The correlation matrix looks different depending on which time period we use. To mitigate this weakness, they can be accompanied by graphing the correlation using a rolling window.   
+The correlation matrix looks different depending on which time period we use. To mitigate this weakness, they can be accompanied by graphing the correlation using a rolling window.
 
-## Autocorrelation 
+## Autocorrelation
 
 ACF_bsk1
 ACF_btc
 
-## Effect of caps and floors 
+## Effect of caps and weight floors
 
-capsfloors_effect_1_alts
+capsweight floors_effect_1_alts
 
 
-## Effect of smoothing 
+## Effect of smoothing
 
-Close to none. 
+Close to none.
