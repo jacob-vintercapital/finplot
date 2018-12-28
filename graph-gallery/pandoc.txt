@@ -1,0 +1,1 @@
+pandoc -s graph-gallery.md -o ../graph-gallery.pdf
