@@ -17,7 +17,7 @@ kör lite bredare streck i vissa grafer
 ------------------------------------------------------------------------------
 
 
-# next: before irl meeting
+# next: before i>Pserl meeting
 
 ## on other account 
 

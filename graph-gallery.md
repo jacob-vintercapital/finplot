@@ -3,11 +3,43 @@ title: Graph Gallery
 description: Contain the important graphs, arranged by topic and incl. comments/explanations
 created: 2018-12-19
 author: Vinter Capital
-numbersections: true
+
+documentclass: article # article report book memoir
+fontsize: 12
+linestretch: 1.25
+fontfamily: mathpazo
+
 toc: true
+toc-depth: 2
+toc-title:
+numbersections: true
+
+lof: false # list of figures with caption
+pagestyle: empty # plain empty headings
+
+include-before-body: disclaimer.md
+
+columns: 1
+wrap: preserve
+dpi: 96 # default 96
+
+default-image-extension: png
+
 ---
 
+    \graphicspath{{./Figures/}}
+
+
+
+# test
+
+caption in many pages
+
+
+
 # TODO
+
+make a python script that send to terminal, firstly .md to .tex secondly .tex to .pdf
 
 this section describes what i need to do.
 
