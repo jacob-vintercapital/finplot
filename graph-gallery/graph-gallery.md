@@ -53,6 +53,8 @@ For those accustomed to time series analysis and reading financial charts, this 
 
 ## Returns
 
+$r_t = log(P_t) - log(P_{t-1})$ where log is the natural logarithm.
+
 ## Weights
 
 ## Volatility
