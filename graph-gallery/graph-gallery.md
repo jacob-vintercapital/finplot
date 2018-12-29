@@ -24,7 +24,6 @@ wrap: preserve
 dpi: 96 # default 96
 
 default-image-extension: png
-
 ---
 
     \graphicspath{{./Figures/}}
@@ -209,9 +208,14 @@ retmat1_rollbeta
 
 ### caps and floors
 
-The defintion for caps and floors are found in the theory section.
+> Question: How does the weight in each asset change when weight caps and floors are imposed?
 
-![Stacked area chart of weight difference between on one hand a regular market capitalization weighted top 10 basket, versus on the other hand imposing weight caps and floors.    This graph answer the question: How does the weight in each asset change when weight caps and floors are imposed?  On the y-axis we see how large this effect is. The colors represent an asset - clearly ETH is most affected, followed by XRP and LTC. The reason for this is the historical dominance of BTC well above 50%. With a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast (it can go from 0.2% to 2% which is a 10x increase) but in absolute terms the changes are small and are thus not seen clearly in this graph.](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
+The answer is given by the stacked area chart of weight difference between on one hand a regular market capitalization weighted top 10 basket, versus on the other hand imposing weight caps and floors.
+(The defintion for caps and floors are found in the theory section.)
+
+![Stacked area chart: Effect of including caps and floors.](/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png)
+
+On the y-axis we see how large this effect is. The colors represent an asset - clearly ETH is most affected, followed by XRP and LTC. The reason for this is the historical dominance of BTC well above 50%. With a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast (it can go from 0.2% to 2% which is a 10x increase) but in absolute terms the changes are small and are thus not seen clearly in this graph.
 
 A lower cap value, e.g. 30% instead of 50%,   decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.
 

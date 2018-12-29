@@ -17,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/0_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state>
               <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
@@ -53,24 +53,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO-finplot.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="181">
                 <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graph-gallery.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2787">
-                <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
               </first_editor>
               <second_editor />
             </state>
@@ -108,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="7" fullScreen="true">
     <option name="x" value="133" />
     <option name="y" value="47" />
     <option name="width" value="1400" />
@@ -201,7 +189,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-30" width="1600" height="930" extended-state="6" />
+    <frame x="0" y="-30" width="1600" height="930" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8509091" visible="true" weight="0.14864865" />
@@ -296,7 +284,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/py/0_lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state>
           <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>

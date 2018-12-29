@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Vinter Capital" />
+  <title>Graph Gallery</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Graph Gallery</h1>
+<h2 class="author">Vinter Capital</h2>
+</div>
+<div id="TOC">
+true
+</div>
+<pre><code>\graphicspath{{./Figures/}}</code></pre>
+<h1 id="test">test</h1>
+<p>caption in many pages</p>
+<h1 id="todo">TODO</h1>
+<p>make a python script that send to terminal, firstly .md to .tex secondly .tex to .pdf</p>
+<p>this section describes what i need to do.</p>
+<p>there are errors in the files. you cannot point to /jl/Documents/crinfu/output because some are wrong e.g. turnover_1 is not at all what it should be. solve this by running code in pycharm on clinux to get the correct output.</p>
+<h1 id="theory">Theory</h1>
+<p>For those accustomed to time series analysis and reading financial charts, this section is not needed. For everyone else, this section provides a point of reference - similar to a glossary.</p>
+<h2 id="prices">Prices</h2>
+<h2 id="returns">Returns</h2>
+<h2 id="weights">Weights</h2>
+<h2 id="volatility">Volatility</h2>
+<h2 id="correlation">Correlation</h2>
+<h2 id="autocorrelation">Autocorrelation</h2>
+<h2 id="rolling-windowkeyboard">Rolling windowkeyboard</h2>
+<p>todo insert plot from my su thesis</p>
+<p>If you have data from day 1 to day 1000, you can split it up into rolling time period of 100 days so that the first windows is day 1 to 100, the second window is day 2 to 101, and so on.</p>
+<p>Using these windows, each of which contain 100 days, we can then compute a statistic such as the mean price for each window. By plotting the mean price on the y-axis and the window's end date on the x-axis, we can see how the mean changed depending on the data that is used.</p>
+<p>Another feature of rolling windows is to smooth data that is volatile, so that the lines in a graph are smoother.</p>
+<h2 id="weight-caps-and-floors">Weight caps and floors</h2>
+<p>With a cap, the weight of asset get modified from <code>w'</code> to <code>w = max(w', weight cap)</code>. With a weight floor, the weight of asset get modified from <code>w'</code> to <code>w = min(w', weight floor)</code>.</p>
+<p>A weight cap can reduce the weight in large assets, and a weight floors can increase the weight in small assets. Large and small, in tis contect, refer to the market capitalization of the asset.</p>
+<p>When a weight cap is imposed, the &quot;removed&quot; weights must be redistributed so that the weights sum to 100%. For example, if BTC has weight 55% according to its market capitalization, and a basket has a weight cap of 30%, then 25% weight is removed from the basked and that must be redistributed to other assets somehow. Vinter Capital achieve this by taking the removed weight (e.g. 25%) and allocating it to all other assets in the basket, according to their previous weight.</p>
+<p>The assets whose weights change when a weight floor is imposed get an increased weight. When a weight floor is imposed, the &quot;added&quot; weights must be taken from somewhere so that the weights sum to 100%. For example, if the tenth asset has a market capitalization so that its weight is 0.6% and we impose a weight floor of 1% then the extra 0.4% has to come from somewhere - otherwise the index weights sum to 100.4%. Vinter Capital achieve this by stealing the added weight (e.g. 0.4%) from all other assets in the basket, except those who have been affected from the cap.</p>
+<h1 id="files">Files</h1>
+<pre><code>/home/he2/Documents/crinfu/output/vcc/vol/volfr_vcc_bsk1_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/volfr_vcc_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/vol_vcc_bsk1_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/vol/vol_vcc_smooth20.png
+
+/home/he2/Documents/crinfu/output/vcc/ret/price-fund_vs_coins.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios_2.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_t5.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_tkr3_market.png
+/home/he2/Documents/crinfu/output/vcc/ret/retvol_scatter_text.png
+/home/he2/Documents/crinfu/output/vcc/ret/total_marketcap.png
+/home/he2/Documents/crinfu/output/vcc/ret/vcc-rollcorr-t5_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/ret/vcc-rollcorr-t10_smooth20.png
+/home/he2/Documents/crinfu/output/vcc/ret/woobull.png
+/home/he2/Documents/crinfu/output/vcc/ret/pri_portfolios.csv
+
+/home/he2/Documents/crinfu/output/vcc/mca/mca_vcc.png
+/home/he2/Documents/crinfu/output/vcc/mca/mca_vcc_bsk1.png
+
+/home/he2/Documents/crinfu/output/bsk/wei/capsweight floors_effect_1_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/capsweight floors_effect_1_BTC.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches1.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches1minus4.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches4.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches8.png
+/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png
+/home/he2/Documents/crinfu/output/bsk/wei/smoothing_w1.png
+/home/he2/Documents/crinfu/output/bsk/wei/turnover_1.png
+/home/he2/Documents/crinfu/output/bsk/wei/turnover_2.png
+/home/he2/Documents/crinfu/output/bsk/wei/volume_5vs10_1.png
+/home/he2/Documents/crinfu/output/bsk/wei/w1_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w1_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4-1m_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4_alts.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/w4-w1_area.png
+/home/he2/Documents/crinfu/output/bsk/wei/wd1_tkr_insouts_mostwei.png
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches_bsk1.txt
+/home/he2/Documents/crinfu/output/bsk/wei/coinswitches_bsk1_minus_bsk4.txt
+/home/he2/Documents/crinfu/output/bsk/wei/member_sum_wei_t5-wm-rm.txt
+/home/he2/Documents/crinfu/output/bsk/wei/member_sum_wei_t10-wm-rm.txt
+/home/he2/Documents/crinfu/output/bsk/wei/nrof_coinsw_w1.csv
+/home/he2/Documents/crinfu/output/bsk/wei/smoothing_1.csv
+/home/he2/Documents/crinfu/output/bsk/wei/tkr_insouts_mostwei_sum.csv
+/home/he2/Documents/crinfu/output/bsk/wei/w4_minusw_1m_mean.csv
+/home/he2/Documents/crinfu/output/bsk/wei/wd_mean.txt
+/home/he2/Documents/crinfu/output/bsk/wei/wei_mthly_t5-wm-rm.csv
+/home/he2/Documents/crinfu/output/bsk/wei/wei_mthly_t10-wm-rm.csv
+/home/he2/Documents/crinfu/output/bsk/wei/w smooth minus w raw, abs(mean()).csv
+
+/home/he2/Documents/crinfu/output/bsk/ret/ACF_bsk1.png
+/home/he2/Documents/crinfu/output/bsk/ret/ACF_btc.png
+/home/he2/Documents/crinfu/output/bsk/ret/bsk-rollcorr-1.png
+/home/he2/Documents/crinfu/output/bsk/ret/contribution_bsk1.png
+/home/he2/Documents/crinfu/output/bsk/ret/contribution_bsk4.png
+/home/he2/Documents/crinfu/output/bsk/ret/qqplot_BTC.png
+/home/he2/Documents/crinfu/output/bsk/ret/qqplot_market.png
+/home/he2/Documents/crinfu/output/bsk/ret/ret_dens_market.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_box.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rollbeta.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rolling_sharpe_1.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_rollvol.png
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_beta.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_descr_interval.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_risk.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_yearly_mean.csv
+/home/he2/Documents/crinfu/output/bsk/ret/retmat1_yearly_vol.csv</code></pre>
+<h1 id="description-of-digital-assets">Description of digital assets</h1>
+<h2 id="prices-1">Prices</h2>
+<p>pri_t5</p>
+<h2 id="market-cap">Market cap</h2>
+<p>total_marketcap</p>
+<h2 id="returns-1">Returns</h2>
+<p>qqplot_market qqplot_BTC</p>
+<h1 id="description-and-comparison-of-indices">Description and comparison of indices</h1>
+<h2 id="prices-2">Prices</h2>
+<h2 id="market-cap-1">Market cap</h2>
+<h2 id="returns-2">Returns</h2>
+<p>contribution_bsk1 contribution_bsk4</p>
+<p>retmat1_box</p>
+<h2 id="risk-returns">Risk &amp; returns</h2>
+<p>retvol_scatter_text</p>
+<h2 id="risk-return">Risk &amp; return</h2>
+<p>retmat1_rollvol</p>
+<p>retmat1_rolling_sharpe_1</p>
+<p>retmat1_rollbeta</p>
+<h2 id="weights-1">Weights</h2>
+<h3 id="caps-and-floors">caps and floors</h3>
+<blockquote>
+<p>How does the weight in each asset change when weight caps and floors are imposed?</p>
+</blockquote>
+<p>The answer is given by the stacked area chart of weight difference between on one hand a regular market capitalization weighted top 10 basket, versus on the other hand imposing weight caps and floors. (The defintion for caps and floors are found in the theory section.)</p>
+<div class="figure">
+<img src="/home/he2/Documents/crinfu/output/bsk/wei/capsfloors_effect_1_alts.png" alt="Stacked area chart: Effect of including caps and floors." />
+<p class="caption">Stacked area chart: Effect of including caps and floors.</p>
+</div>
+<p>On the y-axis we see how large this effect is. The colors represent an asset - clearly ETH is most affected, followed by XRP and LTC. The reason for this is the historical dominance of BTC well above 50%. With a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast (it can go from 0.2% to 2% which is a 10x increase) but in absolute terms the changes are small and are thus not seen clearly in this graph.</p>
+<p>A lower cap value, e.g. 30% instead of 50%, decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.</p>
+<h3 id="some-files">some files</h3>
+<p>w1_alts.png w4_alts.png</p>
+<p>w4-1m_alts.png w1_area.png</p>
+<h3 id="fraction-of-market-cap">fraction of market cap</h3>
+<p>This graph answer the question:</p>
+<blockquote>
+<p>How much closer to the &quot;total&quot; market is a top 10 compared to a top 5 basket?</p>
+</blockquote>
+<p>The fraction of total market capitalzation for a certain basket is defined as the market capitalzation of the assets in the basket, divided by the total market capitalzation. (To get smoother lines a 20 day mean is imposed in the graph.) In order to be logically consistent and practical, we define the total market as a basket with 200 assets weighted by market capitalzation.</p>
+<div class="figure">
+<img src="/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png" alt="A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less. Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market." />
+<p class="caption">A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less. Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.</p>
+</div>
+<blockquote>
+<p>stylish question: is it better to put everything in the caption, or is it better to</p>
+</blockquote>
+<h3 id="turnover-on-rebalancing-date">Turnover on rebalancing date</h3>
+<blockquote>
+<p>What is the turnover in small assets?</p>
+</blockquote>
+<div class="figure">
+<img src="/home/he2/Documents/crinfu/output/bsk/wei/turnover_1.png" alt="this fig is incorrect. see todo section." />
+<p class="caption">this fig is incorrect. see todo section.</p>
+</div>
+<h2 id="correlation-matrix">Correlation matrix</h2>
+<h2 id="rolling-correlation">Rolling correlation</h2>
+<p>The correlation matrix looks different depending on which time period we use. To mitigate this weakness, they can be accompanied by graphing the correlation using a rolling window.</p>
+<h2 id="autocorrelation-1">Autocorrelation</h2>
+<p>ACF_bsk1 ACF_btc</p>
+<h2 id="effect-of-caps-and-weight-floors">Effect of caps and weight floors</h2>
+<p>capsweight floors_effect_1_alts</p>
+<h2 id="effect-of-smoothing">Effect of smoothing</h2>
+<p>Close to none.</p>
+</body>
+</html>
