@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/1-import_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-0_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-0-transform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/0start.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/0start.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,19 +21,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py/0start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="371">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/4b-3-ggbasket_transf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="352">
               <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
             </state>
           </provider>
@@ -90,6 +96,7 @@
     <findStrings>
       <find>db_marketcap</find>
       <find>filepath1long</find>
+      <find>retmat1</find>
     </findStrings>
     <replaceStrings>
       <replace>marketcap</replace>
@@ -112,10 +119,10 @@
         <option value="$PROJECT_DIR$/py/1import-db.py" />
         <option value="$PROJECT_DIR$/TODO-finplot.md" />
         <option value="$PROJECT_DIR$/graph-gallery.md" />
-        <option value="$PROJECT_DIR$/py/0start.py" />
         <option value="$PROJECT_DIR$/py/0_lib.py" />
         <option value="$PROJECT_DIR$/py/1_import.py" />
         <option value="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" />
+        <option value="$PROJECT_DIR$/py/0start.py" />
       </list>
     </option>
   </component>
@@ -286,14 +293,35 @@
       <option name="project" value="LOCAL" />
       <updated>1546132485196</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create object/ and add files by running scripts.">
+      <created>1546132866632</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546132866632</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rename">
+      <created>1546132879641</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546132879641</updated>
+    </task>
+    <task id="LOCAL-00008" summary="minor edit">
+      <created>1546132891394</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546132891394</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-30" width="1600" height="930" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8382609" visible="true" weight="0.15057915" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8382609" visible="true" weight="0.15057915" />
       <window_info id="Structure" order="1" sideWeight="0.16173913" side_tool="true" visible="true" weight="0.15057915" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -306,7 +334,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" visible="true" weight="0.3030303" />
+      <window_info active="true" anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" visible="true" weight="0.3030303" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -338,10 +366,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename folder py2 to py" />
     <MESSAGE value="connect to db (but it fails)" />
-    <MESSAGE value="minor edit" />
     <MESSAGE value="edit download" />
     <MESSAGE value="minor edit tufte" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor edit tufte" />
+    <MESSAGE value="create object/ and add files by running scripts." />
+    <MESSAGE value="rename" />
+    <MESSAGE value="minor edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor edit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph-gallery.md" />
@@ -359,13 +389,6 @@
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/1_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -393,17 +416,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/0start.py">
+    <entry file="file://$PROJECT_DIR$/py/1_import.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="342">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/py/4b-3-ggbasket_transf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="352">
           <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/0start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
