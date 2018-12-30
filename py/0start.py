@@ -6,18 +6,15 @@ this is the minimum viable code needed to run after a new session
 hence its name 0start.py
 '''
 
-## pycharm settings
-
-# check
-plt.isinteractive()
-# set
-plt.interactive(False)
-
 ## create objects
 
 # settings
 execfile('py/0_lib.py')
 execfile('py/0_plots.py')
+
+# pycharm settings
+plt.interactive(False)
+plt.isinteractive()
 
 # import data
 execfile('py/1_import.py')

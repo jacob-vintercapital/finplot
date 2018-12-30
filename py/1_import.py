@@ -8,6 +8,7 @@ saves the imported objects in memory as pandas dataframes.
 # userinputchoice
 START1 = '2015-04'
 END1 = '2018-04'
+PC = False
 
 ## working dir
 
@@ -43,11 +44,14 @@ def re_index_date(df):
 import_long_format = True
 import_wide_format = not import_long_format
 
+if PC:
+    filepath2 = 'input/CryptoData.csv'
+else:
+    filepath2 = '/home/he2/Dropbox/Axlantic/data/other/raw/CryptoData.csv'
 
 if import_long_format:
     # read
-    filepath1long = 'input/CryptoData.csv'
-    dfl_vcc = pd.read_csv(filepath1long, parse_dates=True)
+    dfl_vcc = pd.read_csv(filepath2, parse_dates=True)
     dfl_vcc.info()
     # limit the nr of coins to speed up the computations
     # theoretically this is <=> define market as "current top 200".
@@ -86,7 +90,6 @@ coins_top200 = pri_vcc_mat.columns
 if import_wide_format:
     # read file
     filepath1 = 'input/CryptoDataWide.csv'
-    filepath2 = 'input/CryptoData.csv'
     df_vcc = pd.read_csv(filepath1, parse_dates=True)
     dfl_vcc = pd.read_csv(filepath2, parse_dates=True)
     # i get an error of mixed types. it is merely a warning however.
@@ -127,20 +130,6 @@ url_gold = "https://www.nasdaq.com/markets/gold.aspx"
 
 # download data either online or offline
 online_download = False
-offline_download = not online_download
-
-if offline_download:
-    # read
-    file_pri_fin = 'object/pri_fin_mat.csv'
-    file_vol_fin = 'object/vol_fin_mat.csv'
-    pri_fin_mat = pd.read_csv(file_pri_fin, index_col = 'Date', parse_dates=True)
-    vol_fin_mat = pd.read_csv(file_vol_fin , index_col = 'Date', parse_dates=True)
-    # re index
-    pri_fin_mat = re_index_date(pri_fin_mat)
-    vol_fin_mat = re_index_date(vol_fin_mat)
-    # slice date
-    pri_fin_mat = pri_fin_mat.loc[START1:]
-    vol_fin_mat = vol_fin_mat.loc[START1:]
 
 if online_download:
     # download from stooql. example: https://stooq.pl/q/?s=^spx
@@ -163,6 +152,20 @@ if online_download:
     # save to csv
     pri_fin_mat.to_csv('object/pri_fin_mat.csv')
     vol_fin_mat.to_csv('object/vol_fin_mat.csv')
+
+if not online_download:
+    # read
+    file_pri_fin = 'object/pri_fin_mat.csv'
+    file_vol_fin = 'object/vol_fin_mat.csv'
+    pri_fin_mat = pd.read_csv(file_pri_fin, index_col = 'Date', parse_dates=True)
+    vol_fin_mat = pd.read_csv(file_vol_fin , index_col = 'Date', parse_dates=True)
+    # re index
+    pri_fin_mat = re_index_date(pri_fin_mat)
+    vol_fin_mat = re_index_date(vol_fin_mat)
+    # slice date
+    pri_fin_mat = pri_fin_mat.loc[START1:]
+    vol_fin_mat = vol_fin_mat.loc[START1:]
+
 
 # create new datetime index, of finance dates (weekdays)
 # dtindex_fin = pri_fin_mat.index

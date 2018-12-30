@@ -23,7 +23,7 @@ import glob
 
 # import stocks
 import datetime
-#import pandas_datareader.data as web
+import pandas_datareader.data as web
 
 # statistical modelling
 import statsmodels.api as sm
