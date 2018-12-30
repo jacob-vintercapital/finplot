@@ -145,9 +145,4 @@ ret_bsk_mat.columns
 
 # these objects are analyzed in 9-bsk_ret.py
 
-## effect of caps and floors
-
-# see 9
-
-
 
