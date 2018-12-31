@@ -1,2 +1,2 @@
 pandoc -s graph-gallery.md -o graph-gallery.pdf
-andoc -s graph-gallery.md -o graph-gallery.html
+pandoc -s graph-gallery.md -o graph-gallery.html

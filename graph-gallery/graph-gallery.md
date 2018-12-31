@@ -1,7 +1,7 @@
 ---
 title: Graph Gallery
 description: Contain the important graphs, arranged by topic and incl. comments/explanations
-created: 2018-12-19
+date: created 2018-12-19
 author: Vinter Capital
 
 documentclass: article # article report book memoir
@@ -257,12 +257,14 @@ A top 10 basket capture around 90% of the total market capitalization, and a top
 
 ### Smoothing 
 
-The original weight in asset i $w_i$ is compared with a smoothed weight $w^s_i$.
-The graph qqref display the mean of $\mid w^s_i - w_i \mid$ for i={1, 2, ..., 20}. From the values we can judge the effect smoothing has on weights. BTC is affected ca 2% and ETH ca 1%. 
+The original weight in asset i is compared with a smoothed weight. The difference is $w_i - w^s_i$.
+The graph qqref display mean of $\mid w^s_i - w_i \mid$ for 20 different assets i={1, 2, ..., 20}.  We choose to display the assets with the largest mean absolute difference between its smoothed and raw weight.  The index we chose is the top 10 market cap. weighted index.
+
+From the values we can judge the effect smoothing has on weights. BTC is affected ca 2% and ETH ca 1%. 
 
 Recall when interpeting this plot, that weight in BTC is around 50% so we would expect its absolute difference to be largest. We could normalize by each asset's average weight in the basket, to see which coins are "relatively" most effected but this is not of particular interest. 
 
-![](../output/bsk/wei/smoothing_w1.png)
+![Mean absolute difference of smoothed weight minus raw weight.](../output/bsk/wei/smoothing_w1.png)
 
 Here is how the smoothed weights are computed in practice. 
 Let $m_{it}$ be the market capitalization of asset i at time t. The weight of asset i at time t is given by some function f() so that $w_{it} = f(m_{it})$. 
