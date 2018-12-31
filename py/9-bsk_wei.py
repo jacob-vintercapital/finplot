@@ -1,12 +1,7 @@
-'''
-this script analyze weight differences with different index constructions.
-results are saved to /output/ and /output/vip/
-'''
-
-
-
-
 ## effect of caps and floors
+
+plt.clf()
+plt.close()
 
 # plot 1
 r8.name, r1.name
@@ -18,12 +13,14 @@ ytext1 = 'Weight difference: \n floored & capped minus regular'
 plt.title(title1)
 plt.ylabel(ytext1)
 plt.savefig('output/bsk/wei/capsfloors_effect_1_alts.png')
+plt.close()
 
 # plot 2
 wd.loc['2017':, 'BTC'].plot(color='orange')
 plt.title(title1)
 plt.ylabel('Weight difference for BTC')
 plt.savefig('output/bsk/wei/capsfloors_effect_1_BTC.png')
+plt.close()
 
 # mean
 wd_mean = wd.mean(axis=0).round(3)
@@ -54,6 +51,8 @@ plt.title('Effect of smoothing')
 plt.ylabel('Ticker')
 plt.xlabel('Mean of abs(Smoothed weight minus raw weight)')
 plt.savefig('output/bsk/wei/smoothing_w1.png')
+plt.close()
+
 w_diff_1.to_csv('output/bsk/wei/w smooth minus w raw, abs(mean()).csv')
 
 ## nrtop = 5 vs 10
@@ -88,7 +87,7 @@ w1.shape
 #
 r1.name
 
-# create
+#create
 w1rank = w1.fillna(0).rank(axis=1, method='max', ascending=False)
 rank5 = (w1rank == 5)
 rank10 = (w1rank == 10)
@@ -104,6 +103,7 @@ vol_5vs10_mat.drop('Diff',axis=1).rolling(30).mean().plot()
 plt.ylabel('Trading volume in USD \n Rolling 30 days mean')
 plt.title('Trading volume per asset')
 plt.savefig('output/bsk/wei/volume_5vs10_1.png')
+plt.close()
 
 ## back of the envelope re 10 vs 5 trading volume
 
@@ -186,7 +186,7 @@ def rebalance_trade(wei_mat,
 
 def turnover(wei_trade_mat, what='min'):
   '''
-  input matrix of weights to be traded, see rebalance_trade(). 
+  input matrix of weights to be traded, see rebalance_trade().
   output a pd series of the portfolio turnover.
   :param wei_mat:
   :param ret_mat: returns matrix. assumed freq is daily
@@ -214,6 +214,7 @@ plt.title('Turnover ' + r1.name)
 ylabel1 = 'Turnover: trading needed to rebalance'
 plt.ylabel(ylabel1)
 plt.savefig('output/bsk/wei/turnover_1.png')
+plt.close()
 
 # plot 2
 turno4 = turnover(rebalance_trade(w4))
@@ -227,6 +228,7 @@ plt.title('Turnover comparison')
 plt.ylabel(ylabel1)
 plt.axhline(y=turno1vs4.mean(), color='grey', alpha=0.5)
 plt.savefig('output/bsk/wei/turnover_2.png')
+plt.close()
 
 ## coin switsches
 
@@ -260,17 +262,18 @@ def coinswitch(weights_mat, rebalance_freq='MS'):
   return coinswitch_vec
 
 
-def plot_coinswitch(coinswitch_vec, rname='', filename=''):
+def plot_coinswitch(coinswitch_vec, rname='', filename='', show=False):
   #coinswitch_vec = coinswitch(weight_matrix, rebalance_freq='MS')
   coinswitch_vec.plot(style='.')
   plt.title('Number of coins entering basket \n' + rname)
   plt.ylabel('Number of coins')
   plt.yticks(np.arange(coinswitch_vec.min().min() - 1,
                        coinswitch_vec.max().max() + 2))
-  #plt.ylim([-1, coinswitch_vec.max()+1])
-  
   if filename != '':
     plt.savefig('output/bsk/wei/coinswitches' + filename + '.png')
+  if show:
+    plt.show()
+  plt.close()
 
 # plot a few baskets coin switches
 plot_coinswitch(coinswitch_vec=coinswitch(w1m), rname=r1.name, filename='1')
@@ -281,7 +284,7 @@ plot_coinswitch(coinswitch_vec=coinswitch(w8m), rname=r8.name, filename='8')
 coinswitch(w1).value_counts(normalize=True).sort_index().round(2)\
   .to_csv('output/bsk/wei/coinswitches_bsk1.txt')
 
-# compare basket's coin switches 
+# compare basket's coin switches
 csw_1minus4 = coinswitch(w1) - coinswitch(w4)
 csw_1vs4 = pd.concat([coinswitch(w1), coinswitch(w4)], axis=1)
 csw_1vs4.columns = [r1.name, r4.name]
@@ -298,6 +301,8 @@ csw_1minus4.value_counts(normalize=True).sort_index().round(2)\
 csw_1vs4.plot(style=['o', 'x'])
 (csw_1minus4 == 0).any()
 plt.yticks(np.arange(-1, 4))
+plt.savefig('output/bsk/wei/coinswitches_bsk1_minus_bsk4.png')
+plt.close()
 
 ## export members and wei for SL
 
@@ -370,6 +375,7 @@ w4_minusw_1m[tkr_sel_2].plot()
 plt.title('Weight in ' + r4.name + ' minus ' + r1.name)
 plt.ylabel('Weight difference')
 plt.savefig('output/bsk/wei/w4-w1_area.png')
+plt.close()
 
 # plot w per asset w/o btc for basket 1 and 4
 tkr_t10_top7 = w1m.mean().nlargest(8)
@@ -393,6 +399,7 @@ plt.savefig('output/bsk/wei/w4_alts.png')
 w4_minusw_1m[tkr_top7_common].drop('BTC', axis=1).plot(style='.')
 plt.savefig('output/bsk/wei/w4-1m_alts.png')
 w4_minusw_1m[tkr_top7_common].mean().to_csv('output/bsk/wei/w4_minusw_1m_mean.csv')
+plt.close()
 
 ## which asset entered and left
 
@@ -413,6 +420,7 @@ wd1[tkr_insouts_mostwei.index].plot(style='.')
 plt.ylabel('Trading needed: \n Weight diff current month vs previous')
 plt.title('Trading needed per asset \n in assets that most often go in/out of basket')
 plt.savefig('output/bsk/wei/wd1_tkr_insouts_mostwei.png')
+plt.close()
 
 # create objects of interest
 run_txt_files = False # get some error now out of bound. todo fix it, worked before. but the output is already saved so not very important.
@@ -452,13 +460,16 @@ if run_txt_files:
 # how much of the total marketcap is covered by top10 and top5?
 mca_mat_1 = pd.concat([m0, m1, m4], axis=1)
 mca_mat_1.plot()
+plt.close()
+
 mca_mat_2 = mca_mat_1.div(mca_mat_1.market, axis=0)
 mca_mat_2 = mca_mat_2.drop('market', axis=1)
+
 # plot
 mca_mat_2.rolling(20).mean().plot()
 plt.title('Fraction of total market capitalization')
 plt.ylabel('Basket market cap divided by total market cap')
 plt.savefig('output/bsk/wei/mcafr_bsk1bsk4_smooth20.png')
+plt.close()
 
 ##
-
