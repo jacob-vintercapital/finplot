@@ -4,9 +4,9 @@ import time
 
 ## folder
 
-FOLDER_1 = '~/Dropbox/Axlantic/data/'
+FOLDER_1 = 'home/he2/Dropbox/Axlantic/data/'
 FOLDER_2 = 'other/raw/'
-FOLDER_3 = '~/Documents/vintercapital_mega/'
+FOLDER_3 = 'home/he2/Documents/vintercapital_mega/'
 FILE_1 = 'coinmarketcap.db'
 FILE_2 = 'nomics.db'
 
