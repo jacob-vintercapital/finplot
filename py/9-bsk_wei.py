@@ -32,13 +32,14 @@ wd_mean.nlargest(10).to_csv('output/bsk/wei/wd_mean.txt')
 
 # time series plot
 r1.name, r2.name
-w2m = w3.resample('MS').first()
+w2m = w2.resample('MS').first()
 w_diff = w1m - w2m
 w_diff = w_diff.resample('MS').first()
 w_diff_m = w_diff.mean()
-w_diff_m[w_diff_m > 0.02]
-w_diff_m[w_diff_m < -0.02]
-w_diff_m[w_diff_m < -0.02].to_csv('output/bsk/wei/smoothing_1.csv')
+w_diff_ma = w_diff.abs().mean()
+w_diff_ma.nlargest(20).to_csv('output/bsk/wei/smoothing_1.csv')
+w_diff_m.nsmallest(10).to_csv('output/bsk/wei/smoothing_1_smaller.csv')
+w_diff_m.nlargest(10).to_csv('output/bsk/wei/smoothing_1_larger.csv')
 
 # aggregated plot
 # recall when interpeting this plot, that BTC w is 50%
