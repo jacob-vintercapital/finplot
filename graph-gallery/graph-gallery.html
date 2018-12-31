@@ -12,6 +12,7 @@
 <div id="header">
 <h1 class="title">Graph Gallery</h1>
 <h2 class="author">Vinter Capital</h2>
+<h3 class="date">created 2018-12-19</h3>
 </div>
 <div id="TOC">
 true
@@ -142,22 +143,45 @@ true
 </div>
 <p>On the y-axis we see how large this effect is. The colors represent an asset - clearly ETH is most affected, followed by XRP and LTC. The reason for this is the historical dominance of BTC well above 50%. With a cap of 50% some weight is taken from BTC and allocated to the other nine assets, in accordance with their previous weight. With a floor of 2% the smallest assets get a boost in their weight, especially the ninth and tenth asset. In relative terms, changes can be vast (it can go from 0.2% to 2% which is a 10x increase) but in absolute terms the changes are small and are thus not seen clearly in this graph.</p>
 <p>A lower cap value, e.g. 30% instead of 50%, decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.</p>
+<h3 id="caps-and-floors-1">caps and floors</h3>
+<p>point to local file</p>
+<div class="figure">
+<img src="../output/bsk/wei/capsfloors_effect_1_alts.png" alt="same as above but point to local file" />
+<p class="caption">same as above but point to local file</p>
+</div>
+<p>The closer BTC dominance is to the cap level of 50% the less weight there is left to be distributed to other assets.</p>
+<div class="figure">
+<img src="../output/bsk/wei/capsfloors_effect_1_BTC.png" alt="BTC dominance decrease over time." />
+<p class="caption">BTC dominance decrease over time.</p>
+</div>
 <h3 id="some-files">some files</h3>
 <p>w1_alts.png w4_alts.png</p>
 <p>w4-1m_alts.png w1_area.png</p>
 <h3 id="fraction-of-market-cap">fraction of market cap</h3>
-<p>This graph answer the question:</p>
 <blockquote>
-<p>How much closer to the &quot;total&quot; market is a top 10 compared to a top 5 basket?</p>
+<p>Question: How much closer to the &quot;total&quot; market is a top 10 compared to a top 5 basket?</p>
 </blockquote>
+<p>The answer is provided in fig:ref to fig below.</p>
 <p>The fraction of total market capitalzation for a certain basket is defined as the market capitalzation of the assets in the basket, divided by the total market capitalzation. (To get smoother lines a 20 day mean is imposed in the graph.) In order to be logically consistent and practical, we define the total market as a basket with 200 assets weighted by market capitalzation.</p>
+<p>A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less. Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.</p>
 <div class="figure">
-<img src="/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png" alt="A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less. Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market." />
-<p class="caption">A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less. Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.</p>
+<img src="../output/bsk/wei/mcafr_bsk1bsk4_smooth20.png" alt="Top 10 vs top 5 basket in how much of the market cap. is captured." />
+<p class="caption">Top 10 vs top 5 basket in how much of the market cap. is captured.</p>
 </div>
 <blockquote>
 <p>stylish question: is it better to put everything in the caption, or is it better to</p>
 </blockquote>
+<h3 id="smoothing">Smoothing</h3>
+<p>The original weight in asset i is compared with a smoothed weight. The difference is <span class="math inline"><em>w</em><sub><em>i</em></sub> − <em>w</em><sub><em>i</em></sub><sup><em>s</em></sup></span>. The graph qqref display mean of <span class="math inline">∣<em>w</em><sub><em>i</em></sub><sup><em>s</em></sup> − <em>w</em><sub><em>i</em></sub>∣</span> for 20 different assets i={1, 2, ..., 20}. We choose to display the assets with the largest mean absolute difference between its smoothed and raw weight. The index we chose is the top 10 market cap. weighted index.</p>
+<p>From the values we can judge the effect smoothing has on weights. BTC is affected ca 2% and ETH ca 1%.</p>
+<p>Recall when interpeting this plot, that weight in BTC is around 50% so we would expect its absolute difference to be largest. We could normalize by each asset's average weight in the basket, to see which coins are &quot;relatively&quot; most effected but this is not of particular interest.</p>
+<div class="figure">
+<img src="../output/bsk/wei/smoothing_w1.png" alt="Mean absolute difference of smoothed weight minus raw weight." />
+<p class="caption">Mean absolute difference of smoothed weight minus raw weight.</p>
+</div>
+<p>Here is how the smoothed weights are computed in practice. Let <span class="math inline"><em>m</em><sub><em>i</em><em>t</em></sub></span> be the market capitalization of asset i at time t. The weight of asset i at time t is given by some function f() so that <span class="math inline"><em>w</em><sub><em>i</em><em>t</em></sub> = <em>f</em>(<em>m</em><sub><em>i</em><em>t</em></sub>)</span>.</p>
+<p>The original weight <span class="math inline"><em>w</em></span> is converted to a smoothed weight <span class="math inline"><em>w</em><sup><em>s</em></sup></span> by performing an exponentially weighted moving average (EWMA) to the market capitalization. In other words, first we apply an EWMA method to <span class="math inline"><em>m</em><sub><em>i</em><em>t</em></sub></span> to get m^s_{it} and then we convert this market cap to weights via the function f().</p>
+<p>The EWMA is calculated using the python pandas <code>.ewm</code> method is used i.e. <code>marketcap_matrix = marketcap_matrix.ewm(span=30).mean()</code></p>
 <h3 id="turnover-on-rebalancing-date">Turnover on rebalancing date</h3>
 <blockquote>
 <p>What is the turnover in small assets?</p>

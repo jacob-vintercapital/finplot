@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="edit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.md" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/smoothing_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/smoothing_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/9-bsk_wei.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/9-bsk_wei.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph-gallery/pandoc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/pandoc.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="57" lean-forward="true" selection-start-line="32" selection-end-line="57" />
+            <state relative-caret-position="523">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -28,26 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/0start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="330">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
+        <entry file="file://$PROJECT_DIR$/graph-gallery/pandoc.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/4b-1-ggbasket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="163" column="61" lean-forward="true" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="61" />
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -56,22 +46,12 @@
         <entry file="file://$PROJECT_DIR$/graph-gallery/graph-gallery.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="194">
-                <caret line="267" column="11" selection-start-line="267" selection-start-column="5" selection-end-line="267" selection-end-column="11" />
+              <first_editor relative-caret-position="244">
+                <caret line="260" column="272" lean-forward="true" selection-start-line="260" selection-start-column="272" selection-end-line="260" selection-end-column="272" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output/bsk/wei/capsfloors_effect_1_BTC.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -108,13 +88,14 @@
       <find>smoothing_w1</find>
       <find>w_diff_1</find>
       <find>m_{it}</find>
+      <find>smoothed</find>
     </findStrings>
     <replaceStrings>
       <replace>marketcap</replace>
       <replace>filepath2</replace>
       <replace>plt.close(); plt.clf()</replace>
-      <replace>w_diff_ma</replace>
       <replace>$m_{it}$</replace>
+      <replace>w_diff_ma</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,6 +122,7 @@
         <option value="$PROJECT_DIR$/py/9-trying_bsk_wei.py" />
         <option value="$PROJECT_DIR$/py/0start.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_wei.py" />
+        <option value="$PROJECT_DIR$/graph-gallery/pandoc.txt" />
         <option value="$PROJECT_DIR$/graph-gallery/graph-gallery.md" />
       </list>
     </option>
@@ -157,15 +139,6 @@
     </navigator>
     <panes>
       <pane id="Scope">
-        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="finplot" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
             <path>
@@ -237,13 +210,6 @@
               <item name="finplot" type="462c0819:PsiDirectoryNode" />
               <item name="output" type="462c0819:PsiDirectoryNode" />
               <item name="bsk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finplot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finplot" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
-              <item name="bsk" type="462c0819:PsiDirectoryNode" />
-              <item name="wei" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="finplot" type="b2602c69:ProjectViewProjectNode" />
@@ -397,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546221794058</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add smoothing_w1">
+      <created>1546222204100</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546222204100</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -415,9 +388,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" visible="true" weight="0.3030303" />
+      <window_info anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" weight="0.3030303" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,7 +432,8 @@
     <MESSAGE value="add plt.close() after .plot( and now plots display correctly." />
     <MESSAGE value="add plt.close(); plt.clf() to all plots." />
     <MESSAGE value="change w_diff. was incorrect." />
-    <option name="LAST_COMMIT_MESSAGE" value="change w_diff. was incorrect." />
+    <MESSAGE value="add smoothing_w1" />
+    <option name="LAST_COMMIT_MESSAGE" value="add smoothing_w1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph-gallery.md" />
@@ -558,23 +532,6 @@
     <entry file="file://$PROJECT_DIR$/output/bsk/wei/capsfloors_effect_1_alts.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/bsk/wei/capsfloors_effect_1_BTC.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="57" lean-forward="true" selection-start-line="32" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/0start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -592,11 +549,35 @@
     <entry file="file://$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/bsk/wei/capsfloors_effect_1_BTC.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/0start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph-gallery/pandoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graph-gallery/graph-gallery.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="194">
-            <caret line="267" column="11" selection-start-line="267" selection-start-column="5" selection-end-line="267" selection-end-column="11" />
+          <first_editor relative-caret-position="244">
+            <caret line="260" column="272" lean-forward="true" selection-start-line="260" selection-start-column="272" selection-end-line="260" selection-end-column="272" />
           </first_editor>
           <second_editor />
         </state>
