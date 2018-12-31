@@ -4,15 +4,15 @@ import time
 
 ## folder
 
-FOLDER_1 = 'home/he2/Dropbox/Axlantic/data/'
+FOLDER_1 = '/home/he2/Dropbox/Axlantic/data/'
 FOLDER_2 = 'other/raw/'
-FOLDER_3 = 'home/he2/Documents/vintercapital_mega/'
+FOLDER_3 = '/home/he2/Documents/datasets/vintercapital_mega/'
 FILE_1 = 'coinmarketcap.db'
 FILE_2 = 'nomics.db'
 
 # make sure path referencing works 
-volu1 = pd.read_csv(FOLDER_DATASET + FOLDER_2 + 'volume_monthly.csv')
-volu1 
+volu1 = pd.read_csv(FOLDER_1 + FOLDER_2 + 'volume_monthly.csv')
+volu1.info()
 
 ## IndexComposition table
 
