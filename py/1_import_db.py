@@ -21,7 +21,15 @@ marketcap = sqlite3.connect(FOLDER_3 + FILE_1)
 db_nomics = sqlite3.connect(FOLDER_3 + FILE_2)
 df1 = pd.read_sql_query("SELECT * FROM coinmarketcap_coin", marketcap)
 df2 = pd.read_sql_query("SELECT * FROM coinmarketcap_coin_data", marketcap)
+
+# see
 df1.info()
 df2.info()
 
-# ------------------------------------------------------------------------------
+# dates
+df1.cdate.min()
+df1.cdate.max()
+
+# structure
+df1.head(3)
+df1.tail(3)
