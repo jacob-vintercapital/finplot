@@ -30,31 +30,33 @@ wd_mean.nlargest(10).to_csv('output/bsk/wei/wd_mean.txt')
 
 ## effect of smoothing
 
-# time series plot
+# export csv
 r1.name, r2.name
 w2m = w2.resample('MS').first()
 w_diff = w1m - w2m
 w_diff = w_diff.resample('MS').first()
+
 w_diff_m = w_diff.mean()
-w_diff_ma = w_diff.abs().mean()
-w_diff_ma.nlargest(20).to_csv('output/bsk/wei/smoothing_1.csv')
 w_diff_m.nsmallest(10).to_csv('output/bsk/wei/smoothing_1_smaller.csv')
 w_diff_m.nlargest(10).to_csv('output/bsk/wei/smoothing_1_larger.csv')
+
+w_diff_ma = w_diff.abs().mean()
+w_diff_ma.to_csv('output/bsk/wei/w smooth minus w raw, abs(mean()).csv')
 
 # aggregated plot
 # recall when interpeting this plot, that BTC w is 50%
 # so it should be largest, since we measre absolute value of % diff
 # we could normalize by each asset's (average) weight in the basket, to see which coins are "relatively" most effected
-w_diff_1 = w_diff.abs().mean()
-w_diff_1 = w_diff_1.nlargest(20)
-w_diff_1.plot.barh()
+w_diff_ma = w_diff.abs().mean()
+w_diff_ma = w_diff_ma.nlargest(20)
+w_diff_ma.plot.barh()
 plt.title('Effect of smoothing')
 plt.ylabel('Ticker')
 plt.xlabel('Mean of abs(Smoothed weight minus raw weight)')
 plt.savefig('output/bsk/wei/smoothing_w1.png')
 plt.close(); plt.clf()
 
-w_diff_1.to_csv('output/bsk/wei/w smooth minus w raw, abs(mean()).csv')
+
 
 ## nrtop = 5 vs 10
 

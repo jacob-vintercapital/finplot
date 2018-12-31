@@ -221,6 +221,17 @@ On the y-axis we see how large this effect is. The colors represent an asset - c
 
 A lower cap value, e.g. 30% instead of 50%,   decrease the weight in BTC even more - this in turn increases t the weight in alt coins since the weights must sum to one.
 
+### caps and floors 
+
+point to local file 
+
+![same as above but point to local file](../output/bsk/wei/capsfloors_effect_1_alts.png)
+
+
+The closer BTC dominance is to the cap level of 50% the less weight there is left to be distributed to other assets.
+
+![BTC dominance decrease over time. ](../output/bsk/wei/capsfloors_effect_1_BTC.png)
+
 ### some files
 
 w1_alts.png
@@ -231,16 +242,36 @@ w1_area.png
 
 ### fraction of market cap
 
-This graph answer the question:
+> Question: How much closer to the "total" market is a top 10 compared to a top 5 basket?
 
-> How much closer to the "total" market is a top 10 compared to a top 5 basket?
+The answer is provided in fig:ref to fig below.
 
 The fraction of total market capitalzation for a certain basket is defined as the market capitalzation of the assets in the basket, divided by the total market capitalzation. (To get smoother lines a 20 day mean is imposed in the graph.) In order to be logically consistent and practical, we define the total market as a basket with 200 assets weighted by market capitalzation.
 
-![A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less.     Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.](/home/he2/Documents/crinfu/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png)
+A top 10 basket capture around 90% of the total market capitalization, and a top 5 basket slightly less.     Over time, the fraction is decreasing, indicating that the coins with a market capitalzation ranked below 11 are growing in size relative to the top 10. In the future, a top 20 or top 50 index might be needed to capture the market.
+
+![Top 10 vs top 5 basket in how much of the market cap. is captured.](../output/bsk/wei/mcafr_bsk1bsk4_smooth20.png)
 
 
 > stylish question: is it better to put everything in the caption, or is it better to
+
+### Smoothing 
+
+The original weight in asset i $w_i$ is compared with a smoothed weight $w^s_i$.
+The graph qqref display the mean of $\mid w^s_i - w_i \mid$ for i={1, 2, ..., 20}. From the values we can judge the effect smoothing has on weights. BTC is affected ca 2% and ETH ca 1%. 
+
+Recall when interpeting this plot, that weight in BTC is around 50% so we would expect its absolute difference to be largest. We could normalize by each asset's average weight in the basket, to see which coins are "relatively" most effected but this is not of particular interest. 
+
+![](../output/bsk/wei/smoothing_w1.png)
+
+Here is how the smoothed weights are computed in practice. 
+Let $m_{it}$ be the market capitalization of asset i at time t. The weight of asset i at time t is given by some function f() so that $w_{it} = f(m_{it})$. 
+
+The original weight $w$ is converted to a smoothed weight $w^s$ by performing an exponentially weighted moving average (EWMA) to the market capitalization. In other words, first we apply an EWMA method to $m_{it}$ to get m^s_{it} and then we convert this market cap to weights via the function f(). 
+
+The EWMA is calculated using the python pandas `.ewm` method is used i.e. 
+`marketcap_matrix = marketcap_matrix.ewm(span=30).mean()`
+
 
 ### Turnover on rebalancing date
 
