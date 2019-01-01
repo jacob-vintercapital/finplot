@@ -24,6 +24,7 @@ return2aum(ret_bsk_mat).plot(logy=True)
 plt.title('$100 Investment')
 plt.ylabel('Value')
 plt.savefig('output/bsk/ret/pri_bsk_a.png')
+plt.close(); plt.clf()
 
 # corr over time
 cor90_bsk_mat = ret_bsk_mat.rolling(365).corr(ret_bsk_mat[r1.name])
@@ -33,6 +34,7 @@ plt.ylabel('Correlation vs t10-wm-rm')
 plt.gca().set_ylim(top=1.01)
 plt.title('Rolling 1y correlation \n All vs t10-wm-rm')
 plt.savefig('output/bsk/ret/bsk-rollcorr-1.png')
+plt.close(); plt.clf()
 
 # choose a few baskets
 retmat1 = pd.concat([r0, r1, r2, r3, r8,
@@ -48,6 +50,7 @@ retmat1.rolling(90).std().rolling(10).mean().plot()
 plt.title('Rolling 90 days volatility')
 plt.ylabel('Volatility \n (Smoothed with 10 day mean)')
 plt.savefig('output/bsk/ret/retmat1_rollvol.png')
+plt.close(); plt.clf()
 # same but smoothed
 
 # mean vola, with upper and lower limits
@@ -91,6 +94,7 @@ retmat1.rolling(365).apply(sharpe).rolling(30).mean().plot()
 plt.title('Sharpe ratio rolling 1y')
 plt.ylabel('Sharpe ratio \n (Smoothed with 30d mean)')
 plt.savefig('output/bsk/ret/retmat1_rolling_sharpe_1.png')
+plt.close(); plt.clf()
 
 # beta
 beta(retmat1).round(3).to_csv('output/bsk/ret/retmat1_beta.csv')
@@ -117,7 +121,7 @@ roll(retmat1, w=90).apply(beta).rolling(10).mean().plot()
 plt.title('Rolling 90 days beta')
 plt.ylabel('Beta \n (Smoothed with 10 day mean)')
 plt.savefig('output/bsk/ret/retmat1_rollbeta.png')
-
+plt.close(); plt.clf()
 
 ## ret top 10
 
@@ -146,6 +150,7 @@ dens = sm.nonparametric.KDEUnivariate(retmat1.market)
 dens.fit()
 plt.plot(dens.cdf)
 plt.savefig('output/bsk/ret/ret_dens_market.png')
+plt.close(); plt.clf()
 
 # qq plot 1
 #sm.qqplot(retmat1.market, stats.t, distargs=(4,))
