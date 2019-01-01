@@ -1,7 +1,6 @@
 ## effect of caps and floors
 
-plt.clf()
-plt.close(); plt.clf()
+plt.close('all'); plt.clf()
 
 # plot 1
 r8.name, r1.name
