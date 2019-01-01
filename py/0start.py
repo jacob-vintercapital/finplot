@@ -16,6 +16,9 @@ execfile('py/0_plots.py')
 plt.interactive(False)
 plt.isinteractive()
 
+# computer
+CLINUX = True
+
 # import data
 execfile('py/1_import.py')
 

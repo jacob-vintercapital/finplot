@@ -21,10 +21,12 @@ retvol_t10['Sharpe'] = retvol_t10.Return / retvol_t10.Volatility
 ## sns scatter
 
 retvol_t10['Symbol'] = retvol_t10.index
-clinux = False
-if clinux:
+# todo get error even though relplot is in the docs for sns
+if False:
   sns.relplot(x='Volatility', y='Return', hue='Symbol', size='Sharpe',
               data=retvol_t10)
+  plt.show()
+
 
 ## ret vol scatter, w text
 
@@ -56,6 +58,7 @@ pri_t5.plot(logy=True)
 plt.title('$100 investment')
 plt.ylabel('Value')
 plt.savefig('output/vcc/ret/pri_t5.png')
+plt.close(); plt.clf()
 
 pri_mrkt = return2aum(r0[START3:])
 pd.concat([pri_tkr3, pri_mrkt], axis=1).max()
@@ -64,13 +67,24 @@ pri_mrkt.plot(logy=True, color='black', linewidth=2, legend=True)
 plt.title('$100 investment')
 plt.ylabel('Value')
 plt.savefig('output/vcc/ret/pri_tkr3_market.png')
+plt.close(); plt.clf()
 
 ## total market cap
 
+# log
 mca_vcc_mat.sum(1).plot(logy=True, color='black')
-plt.title('Total market captalization on a log scale')
-plt.ylabel('Market cap in USD')
+plt.title('Total market capitalization on a log scale')
+plt.ylabel('Market cap. in USD')
+plt.savefig('output/vcc/ret/total_marketcap_log.png')
+plt.close(); plt.clf()
+
+# not log
+mca_vcc_mat.sum(1).div(10**9).plot(logy=False, color='black')
+plt.title('Total market capitalization')
+plt.ylabel('Market cap. in billion USD')
 plt.savefig('output/vcc/ret/total_marketcap.png')
+plt.close(); plt.clf()
+
 
 ## total market cap vs owning the market
 
@@ -104,6 +118,8 @@ plt.title('$100 Invested')
 plt.ylabel('USD')
 plt.gca().set_ylim(bottom=BOTTOM, top=TOP)
 plt.savefig('output/vcc/ret/pri_portfolios.png')
+plt.close(); plt.clf()
+
 # table
 final_prices = primat2.iloc[-1,:]
 final_shrp = sharpe(retmat2.loc[START3:])
@@ -122,6 +138,8 @@ plt.title('$100 Invested')
 plt.ylabel('USD')
 plt.gca().set_ylim(bottom=BOTTOM, top=TOP)
 plt.savefig('output/vcc/ret/pri_portfolios_2.png')
+plt.close(); plt.clf()
+
 
 
 ## corr
@@ -131,5 +149,4 @@ tkr_t5hist
 
 tkr_t5hist
 tkr_sp500_top5 = ['AAPL', 'MSFT', 'AMZN', 'JNJ', 'JPM']
-
 

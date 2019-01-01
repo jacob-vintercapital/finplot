@@ -157,15 +157,14 @@ if not online_download:
     # read
     file_pri_fin = 'object/pri_fin_mat.csv'
     file_vol_fin = 'object/vol_fin_mat.csv'
-    pri_fin_mat = pd.read_csv(file_pri_fin, index_col = 'Date', parse_dates=True)
-    vol_fin_mat = pd.read_csv(file_vol_fin , index_col = 'Date', parse_dates=True)
+    pri_fin_mat = pd.read_csv(file_pri_fin, index_col=0, parse_dates=True)
+    vol_fin_mat = pd.read_csv(file_vol_fin , index_col=0, parse_dates=True)
     # re index
     pri_fin_mat = re_index_date(pri_fin_mat)
     vol_fin_mat = re_index_date(vol_fin_mat)
     # slice date
     pri_fin_mat = pri_fin_mat.loc[START1:]
     vol_fin_mat = vol_fin_mat.loc[START1:]
-
 
 # create new datetime index, of finance dates (weekdays)
 # dtindex_fin = pri_fin_mat.index

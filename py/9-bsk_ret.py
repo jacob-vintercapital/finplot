@@ -2,6 +2,9 @@
 create a bunch of different indexes using ggindex() and compare their properties.
 """
 
+plt.close('all')
+plt.clf()
+
 
 # set start end date
 ret_bsk_mat.index[0]
@@ -10,6 +13,9 @@ ret_bsk_mat.index[-1]
 # corr
 ret_bsk_mat.corr().round(4)
 ret_bsk_mat.corr().round(4).to_csv('output/bsk/ret/corr_1.csv')
+
+# todo add corr plot
+
 
 # sharpe sortino
 sharpe_1 = sharpe(ret_bsk_mat, showall=True).round(2)
@@ -115,6 +121,11 @@ def roll(df, w):
   # is now ready for any action normally performed
   # on a groupby object
   return panel.to_frame().unstack().T.groupby(level=0)
+# todo change from Panel() to another method.
+# Panel is deprecated and will be removed in a future version.
+# The recommended way to represent these types of 3-dimensional data are with a MultiIndex on a DataFrame, via the Panel.to_frame() method
+# Alternatively, you can use the xarray package http://xarray.pydata.org/en/stable/.
+# Pandas provides a `.to_xarray()` method to help automate this conversion.
 
 # see rolling beta
 roll(retmat1, w=90).apply(beta).rolling(10).mean().plot()
@@ -137,36 +148,46 @@ plt.ylabel('Daily returns')
 plt.title('Box plot of daily returns')
 plt.savefig('output/bsk/ret/retmat1_box.png')
 
-# hist
-def histplot(retmat, col):
-  retmat[col].plot.hist()
-  plt.title(col)
-retmat1.columns
-histplot(retmat1, retmat1.columns[1])
+# violin
+if CLINUX:
+    long_retmat1 = retmat1.melt()
+    long_retmat1.columns = ['symbol', 'return']
+    sns.violinplot(x='return', y='symbol', data=long_retmat1)
+    plt.savefig('output/bsk/ret/retmat1_violin.png')
+    plt.close(); plt.clf()
 
-# todo use sns kernel density plot and have 1-3 in a plot. clinux.
+# density
+if CLINUX:
+    retmat1.columns
+    sns.kdeplot(retmat1['BTC'], cumulative=True)
+    sns.kdeplot(retmat1['market'], cumulative=True)
+    sns.kdeplot(retmat1['t10-wm-rm'], cumulative=True)
+    plt.title('Cumulative Density Function')
+    plt.savefig('output/bsk/ret/retmat1_cdf.png')
+    plt.close(); plt.clf()
+
+# hist
+retmat1.columns
+retmat1[retmat1.columns[1]].plot.hist()
+plt.title(retmat1.columns[1])
+plt.close(); plt.clf()
 
 dens = sm.nonparametric.KDEUnivariate(retmat1.market)
 dens.fit()
 plt.plot(dens.cdf)
 plt.savefig('output/bsk/ret/ret_dens_market.png')
-plt.close(); plt.clf()
-
-# qq plot 1
-#sm.qqplot(retmat1.market, stats.t, distargs=(4,))
-sm.qqplot(retmat1.market, stats.t, fit=True, line='45')
-
-sm.qqplot(retmat1.market, stats.t, distargs=(3,), line='45')
+plt.close('all'); plt.clf()
 
 # todo not at all like in thesis vid t distr df=4
 
 def qqplot(ret_vec, name=''):
-  #sm.qqplot(ret_vec, stats.t, fit=True, line='45')
-  sm.qqplot(retmat1.market, stats.t, distargs=(3,))
+  sm.qqplot(ret_vec, stats.t, fit=True, line='45')
+  #sm.qqplot(retmat1.market, stats.t, distargs=(3,))
   plt.title('Q-Q-plot ' + name)
-  filename = 'output/bsk/ret/qqplot_' + name + '.png'
+  filename = 'output/bsk/ret/q-q-plot_' + name + '.png'
   plt.savefig(filename)
-
+  plt.title('Q-Q Plot market')
+  plt.close(); plt.clf()
 qqplot(retmat1.BTC, 'BTC')
 qqplot(retmat1.market, 'market')
 # todo read up on statsmodel regarding the params used.
@@ -192,6 +213,7 @@ tkr_most_contrib = tkr_temp1 + tkr_temp2
 
 # plot
 contr1[tkr_most_contrib].mean().plot.barh()
+plt.show()
 
 # plot
 contr1[tkr_t10now].mean().plot.barh()
@@ -199,6 +221,7 @@ plt.title('Mean contribution \n in ' + r1.name)
 plt.xlabel('Contribution = weight times annualized return')
 plt.ylabel('Current top 10 assets')
 plt.savefig('output/bsk/ret/contribution_bsk1.png')
+plt.close(); plt.clf()
 
 # plot
 tkr_t5now
@@ -207,12 +230,16 @@ plt.title('Mean contribution \n in ' + r4.name)
 plt.xlabel('Contribution = weight times annualized return')
 plt.ylabel('Current top 5 assets')
 plt.savefig('output/bsk/ret/contribution_bsk4.png')
+plt.close(); plt.clf()
 
 ## density of ret
 
-clinux = False
-if clinux:
-  g = sns.PairGrid(retmat1, diag_sharey=False)
-  g.map_lower(sns.kdeplot)
-  g.map_upper(sns.scatterplot)
-  g.map_diag(sns.kdeplot, lw=3)
+pairs_plot = False # turning on takes time to compute and the file is already saved
+if pairs_plot:
+    g = sns.PairGrid(retmat1)
+    g = g.map_upper(plt.scatter)
+    g = g.map_lower(sns.kdeplot, cmap="Blues_d")
+    g = g.map_diag(sns.kdeplot, lw=3, legend=False)
+    plt.show()
+
+##

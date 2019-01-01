@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="">
+    <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/vcc/ret/total_marketcap.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/total_marketcap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/0start.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/0start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/1_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/7-ret_slides.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/7-ret_slides.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/9-bsk_ret.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/9-bsk_ret.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/9-bsk_wei.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/9-bsk_wei.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +38,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/0start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="380">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py/7-ret_slides.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+            <state relative-caret-position="397">
+              <caret line="244" column="2" lean-forward="true" selection-start-line="244" selection-start-column="2" selection-end-line="244" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -74,13 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>retmat1</find>
-      <find>plt.</find>
-      <find>coinswitches_bsk1_minus_bsk4</find>
-      <find>.plot</find>
-      <find>minus</find>
-      <find>+ 'diff</find>
-      <find>coinswitches1minu</find>
       <find>coinswitches_</find>
       <find>smoothing</find>
       <find>'orange'</find>
@@ -104,6 +117,13 @@
       <find>.to_fra</find>
       <find>boxplot</find>
       <find>plt.show</find>
+      <find>sns.</find>
+      <find>&gt;&gt; &gt;</find>
+      <find>log sca</find>
+      <find>total_market</find>
+      <find>plot(</find>
+      <find>vcc-rollcorr-t5_smooth20</find>
+      <find>log scale</find>
     </findStrings>
     <replaceStrings>
       <replace>marketcap</replace>
@@ -138,13 +158,14 @@
         <option value="$PROJECT_DIR$/py/py/9-trying-bsk_ret.py" />
         <option value="$PROJECT_DIR$/py/9-trying_bsk_ret.py" />
         <option value="$PROJECT_DIR$/py/9-trying_bsk_wei.py" />
-        <option value="$PROJECT_DIR$/py/0start.py" />
         <option value="$PROJECT_DIR$/graph-gallery/pandoc.txt" />
         <option value="$PROJECT_DIR$/graph-gallery/graph-gallery.md" />
         <option value="$PROJECT_DIR$/py/1_import_db.py" />
         <option value="$PROJECT_DIR$/py/1_import.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_wei.py" />
+        <option value="$PROJECT_DIR$/py/0start.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_ret.py" />
+        <option value="$PROJECT_DIR$/py/7-ret_slides.py" />
       </list>
     </option>
   </component>
@@ -433,8 +454,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546302365959</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add cdf plot.">
+      <created>1546303315461</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1546303315461</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-30" width="1600" height="930" extended-state="6" />
@@ -449,11 +486,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993565" weight="0.16484849" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4993565" weight="0.32969698" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969698" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" visible="true" weight="0.34666666" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006435" side_tool="true" weight="0.34666666" />
+      <window_info active="true" anchor="bottom" x="489" y="78" width="748" height="746" id="Python Console" order="10" sideWeight="0.4993565" visible="true" weight="0.34666666" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -491,7 +528,6 @@
     <MESSAGE value="rename" />
     <MESSAGE value="minor edit" />
     <MESSAGE value="add graphs from running 0start.py" />
-    <MESSAGE value="edit" />
     <MESSAGE value="add plt.close() after .plot( and now plots display correctly." />
     <MESSAGE value="add plt.close(); plt.clf() to all plots." />
     <MESSAGE value="change w_diff. was incorrect." />
@@ -502,7 +538,9 @@
     <MESSAGE value="connection to db works now." />
     <MESSAGE value="describe data" />
     <MESSAGE value="add plt.close(); plt.clf()." />
-    <option name="LAST_COMMIT_MESSAGE" value="add plt.close(); plt.clf()." />
+    <MESSAGE value="add cdf plot." />
+    <MESSAGE value="edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph-gallery.md" />
@@ -632,6 +670,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="244" column="2" lean-forward="true" selection-start-line="244" selection-start-column="2" selection-end-line="244" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/py/1_import.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -641,15 +686,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/py/0start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="380">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
+    <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+        <state relative-caret-position="321">
+          <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/7-ret_slides.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
