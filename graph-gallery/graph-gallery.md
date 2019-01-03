@@ -59,6 +59,10 @@ $r_t = log(P_t) - log(P_{t-1})$ where log is the natural logarithm.
 
 ## Volatility
 
+## Volume 
+
+Trading volume is measured in USD. 
+
 ## Correlation
 
 ## Autocorrelation
@@ -302,3 +306,15 @@ capsweight floors_effect_1_alts
 ## Effect of smoothing
 
 Close to none.
+
+
+## Trading volume 
+
+The trading volume for our top 10 basket as well as the three largest coins is shown in the figure. 
+
+The trading volume for our basket is defined as 
+$\sum_{i=1}^{10} w_i v_i$ where $v_i$ is the volume traded in asset i and and $w_i$ is the index weight in that asset.
+
+Both XRP and ETH experience rapid increases in their total trading volume a number of times.
+
+![Trading volume increase over time.](/home/he2/Dropbox/gitvc/finplot/output/vcc/vol/vol_vcc_smooth20_log.png)
