@@ -60,8 +60,8 @@ if import_long_format:
     # select useful cols
     dfl_vcc = dfl_vcc[['symbol', 'date', 'close', 'volume', 'market']]
     dfl_vcc.head()
-    # slice dates (new!)
-    dfl_vcc = dfl_vcc.loc[dfl_vcc.date > START1]
+    # slice dates
+    dfl_vcc = dfl_vcc.loc[dfl_vcc.date >= START1]
     # make date column a date. 
     assert len(dfl_vcc.date) == len(pd.to_datetime(dfl_vcc.date))
     dfl_vcc.date = pd.to_datetime(dfl_vcc.date)
@@ -116,9 +116,6 @@ if import_wide_format:
 # financial tickers
 tkr_fin = ['Stocks', 'Bonds', 'Gold']
 
-# choose start date = first day of vcc datetime index
-start0 = pri_vcc_mat.index[0]
-
 # background information on stocks bonds gold
 name_bonds = "Vanguard Total Bond Market ETF"
 url_bonds = "https://www.morningstar.com/etfs/ARCX/BND/quote.html"
@@ -128,21 +125,25 @@ name_gold = "Commodity Futures Price Quotes for Gold (COMEX)"
 url_gold = "https://www.nasdaq.com/markets/gold.aspx"
 # https://stooq.pl/q/?s=iau.us is another possibel choihce for gold
 
+# choose start date = first day of vcc datetime index
+START0 = pri_vcc_mat.index[0]
+END0 = pri_vcc_mat.index[-1]
+
 # download data either online or offline
 online_download = False
 
 if online_download:
     # download from stooql. example: https://stooq.pl/q/?s=^spx
-    stocks = web.DataReader('^SPX', 'stooq', start0)
-    bonds = web.DataReader('BND.US', 'stooq', start0)
-    gold = web.DataReader('GC.F', 'stooq', start0)
+    stocks = web.DataReader('^SPX', 'stooq', START0)
+    bonds = web.DataReader('BND.US', 'stooq', START0)
+    gold = web.DataReader('GC.F', 'stooq', START0)
     # concat price and volume matrix
     pri_fin_mat = pd.concat([stocks.Close, bonds.Close, gold.Close], axis=1)
     vol_fin_mat = pd.concat([stocks.Volume, bonds.Volume, gold.Volume], axis=1)
     # trim size
     pri_fin_mat = np.round(pri_fin_mat, 4)
-    pri_fin_mat = pri_fin_mat[start0:]
-    vol_fin_mat = vol_fin_mat[start0:]
+    pri_fin_mat = pri_fin_mat[START0:]
+    vol_fin_mat = vol_fin_mat[START0:]
     # rename
     pri_fin_mat.columns = tkr_fin
     vol_fin_mat.columns = tkr_fin
@@ -163,8 +164,22 @@ if not online_download:
     pri_fin_mat = re_index_date(pri_fin_mat)
     vol_fin_mat = re_index_date(vol_fin_mat)
     # slice date
-    pri_fin_mat = pri_fin_mat.loc[START1:]
-    vol_fin_mat = vol_fin_mat.loc[START1:]
+    pri_fin_mat = pri_fin_mat.loc[START0:END0]
+    vol_fin_mat = vol_fin_mat.loc[START0:END0]
+
+## create returns matrices
+
+ret_vcc_mat = price2return(pri_vcc_mat, fill_na_0=True)
+ret_fin_mat = price2return(pri_fin_mat, fill_na_0=True)
+
+# Corr matrix will include the missing values
+ret_vcc_mat_withna = price2return(pri_vcc_mat, fill_na_0=False)
+ret_fin_mat_withna = price2return(pri_fin_mat, fill_na_0=False)
+ret_fin_mat_withna.isnull().sum().sum()
+ret_vcc_mat_withna[['BTC', 'ETH', 'XRP', 'LTC']].isnull().sum().sum()
+
+
+(ret_vcc_mat == 0).mean().mean()
 
 # create new datetime index, of finance dates (weekdays)
 # dtindex_fin = pri_fin_mat.index

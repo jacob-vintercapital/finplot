@@ -28,8 +28,8 @@ assert isinstance(name, basestring)
 
 ## start end date
 
-def date_slicer(df, start='', end='', startafter=365):
-  # default: start 1y after df first day. end on last day.
+def date_slicer(df, start='', end='', startafter=0):
+  # default: start 0 days after df first day. end on last day.
   # override this default using params start and end.
   if start=='':
       start = df.index[startafter]
@@ -240,7 +240,7 @@ def ggbasket(name,
                custom_assets=[], custom_weights=[],
                weight_max=1, weight_min=0,
              # date slicing
-             start='', end='', startafter=365,
+             start='', end='', startafter=0,
              # historical data
              marketcap_matrix = mca_vcc_mat,
              returns_matrix = price2return(pri_vcc_mat),

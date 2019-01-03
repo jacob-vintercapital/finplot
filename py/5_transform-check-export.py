@@ -97,7 +97,7 @@ def export_object(object):
   file = 'output/' + object + '.csv'
   return object.to_csv(file)
 
-# list all the important objects in 4_transform.py
+# list all the important objects in 4_transform-old.py
 most_objects = [# B and W matrix
                 bmc_mat,
                 wmc_mat,

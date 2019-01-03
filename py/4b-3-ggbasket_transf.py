@@ -1,6 +1,6 @@
 """
 combine xyz_vcc_mat and xyz_fin_mat with df_blx to become xyz_mat for xyz = [ret, mca, pri, mcafr, volfr]
-code below is copied from `4_transform.py`
+code below is copied from `4_transform-old.py`
 todo read it and see if it must be modified now that we have ggindex().
 
 these objects will be analyzed in scripts 9-ggbasket-...
@@ -47,6 +47,7 @@ w5, r5, m5, v5 = ggbasket(name='t5-wsm-rm',
                           rebalance_freq='MS',
                           weighting='marketcap',
                           smooth=True)
+
 # floor to min weight 1%
 w6,r6,m6,v6 = ggbasket(name='t5-wm-rm-f1',
                        nrtop=5, rebalance_freq='MS',
