@@ -44,6 +44,9 @@ def re_index_date(df):
 import_long_format = True
 import_wide_format = not import_long_format
 
+import_from_sql = False
+import_from_csv = not import_from_sql
+
 if PC:
     filepath2 = 'input/CryptoData.csv'
 else:
@@ -85,7 +88,7 @@ if import_long_format:
     assert (mca_vcc_mat.index == pri_vcc_mat.index).all()
     assert (vol_vcc_mat.index == pri_vcc_mat.index).all()
 
-coins_top200 = pri_vcc_mat.columns
+
 
 if import_wide_format:
     # read file
