@@ -1,9 +1,10 @@
-import sqlite3
-from sqlite3 import Error
-import time
 
-## folder
 
+## folders
+
+FOLDER_1 + FOLDER_2
+
+FILE_1 = 'coinmarketcap.db'
 FOLDER_1 = '/home/he2/Dropbox/Axlantic/data/'
 FOLDER_2 = 'other/raw/'
 FOLDER_3 = '/home/he2/Documents/datasets/vintercapital_mega/'
@@ -33,3 +34,10 @@ df1.cdate.max()
 # structure
 df1.head(3)
 df1.tail(3)
+
+
+
+## import long format. save as matrices.
+
+
+tkr_top200now

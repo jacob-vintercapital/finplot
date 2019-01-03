@@ -142,17 +142,24 @@ ret_vcc_mat[tkr_t10now]
 
 ## ret distribution
 
+retmat1.max()
+retmat1.min()
+retmat1.describe()
+
 # box
+titlebox = 'Distribution of daily returns'
 retmat1.plot.box()
 plt.ylabel('Daily returns')
-plt.title('Box plot of daily returns')
+plt.title(titlebox)
 plt.savefig('output/bsk/ret/retmat1_box.png')
+plt.close()
 
 # violin
 if CLINUX:
     long_retmat1 = retmat1.melt()
     long_retmat1.columns = ['symbol', 'return']
     sns.violinplot(x='return', y='symbol', data=long_retmat1)
+    plt.title(titlebox)
     plt.savefig('output/bsk/ret/retmat1_violin.png')
     plt.close(); plt.clf()
 
@@ -162,7 +169,7 @@ if CLINUX:
     sns.kdeplot(retmat1['BTC'], cumulative=True)
     sns.kdeplot(retmat1['market'], cumulative=True)
     sns.kdeplot(retmat1['t10-wm-rm'], cumulative=True)
-    plt.title('Cumulative Density Function')
+    plt.title(titlebox + ' CDF plot')
     plt.savefig('output/bsk/ret/retmat1_cdf.png')
     plt.close(); plt.clf()
 

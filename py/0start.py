@@ -32,7 +32,9 @@ execfile('py/3_f_returns.py')
 
 # create baskets
 execfile('py/4b-1-ggbasket.py')
+execfile('py/4b-2-ggbasket-check.py')
 execfile('py/4b-3-ggbasket_transf.py')
+
 
 ## create output
 
@@ -45,6 +47,6 @@ execfile('py/7-ret_slides.py')
 #execfile('py/8-boke1.py')
 
 execfile('py/9-bsk_wei.py')
-execfile('py/9-bsk_ret.py') # /home/he2/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py:528: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+execfile('py/9-bsk_ret.py')
 execfile('py/9-bsk_statsmodels.py')
 

@@ -41,8 +41,8 @@ clr_sel_blx = [clr_btc, clr_eth, clr_blx]
 
 # start a year ago
 ret_vcc_mat.index[-1] - DateOffset(years=1)
-START2 = '2015-04'
-END2 = '2018-04'
+START2 = START1
+END2 = END1
 pri_vcc_mat_2 = return2aum(ret_vcc_mat.loc[START2:, tkr_t5now])
 pri_vcc_mat_2.plot(logy=True)
 plt.title('$100 investment a year ago')

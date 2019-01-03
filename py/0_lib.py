@@ -5,6 +5,11 @@ import os
 import pandas as pd
 import numpy as np
 
+# import databases
+import sqlite3
+from sqlite3 import Error
+import time
+
 # dates
 from pandas.tseries.offsets import *
 
