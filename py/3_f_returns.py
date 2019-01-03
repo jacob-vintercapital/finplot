@@ -248,10 +248,12 @@ def corrplot(corr, annot=False):
 
   # Draw the heatmap with the mask and correct aspect ratio
 
-  heatmap = sns.heatmap(corr,
-                     mask=mask, annot=annot, cmap=cmap,
-                     vmax=.3, center=0, square=True,
-                     linewidths=.5, cbar_kws={"shrink": .5})
+  plt.style.available
+  with plt.style.context('seaborn-white'):
+      heatmap = sns.heatmap(corr,
+                             mask=mask, annot=annot, cmap=cmap,
+                             vmax=.3, center=0, square=True,
+                             linewidths=.5, cbar_kws={"shrink": .5})
   return heatmap
 
 
@@ -261,7 +263,7 @@ title_corr = 'Correlation matrix - daily data \n from ' + txt_daterange
 
 def show_corr_plot(df,
                    start='', end='',
-                   cols='', title=''):
+                   cols='', title='Correlation matrix'):
     """
     input a return matrix df (eg monthly or daily returns)
     slice the df by startdate, enddate and columns.
@@ -276,12 +278,12 @@ def show_corr_plot(df,
     if cols=='':
       cols = df.columns
     if title=='':
-      'Correlation matrix on daily data'
+      'Correlation matrix' # on daily data
     # plot
     corr_mat = df.loc[start:end, cols].corr()
     corrplot(corr_mat)
     plt.title(title)
-    plt.show()
+    # then use plt.show() or .savefig and .close
 
 def show_rollcorr_plot(cor_mat, cols, legend=False, title=''):
     cor_mat[cols].plot(legend=legend)

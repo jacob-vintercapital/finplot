@@ -25,9 +25,13 @@ execfile('py/1_import.py')
 # functions
 execfile('py/3_f_rescalew.py')
 execfile('py/3_f_returns.py')
-execfile('py/4b-1-ggbasket.py')
 
-# create & export object by applying f() to data
+# clean
+#execfile('py/4b-0-transform.py')
+
+
+# create baskets
+execfile('py/4b-1-ggbasket.py')
 execfile('py/4b-3-ggbasket_transf.py')
 
 ## create output

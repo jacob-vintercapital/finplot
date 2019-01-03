@@ -20,10 +20,6 @@ pandas will join on index.
 https://pandas.pydata.org/pandas-docs/stable/merging.html#joining-on-index
 """
 
-# create returns matrices
-ret_vcc_mat = price2return(pri_vcc_mat)
-ret_fin_mat = price2return(pri_fin_mat)
-
 # step 1: merge fin with vcc.
 ret_finvcc_mat = ret_fin_mat.join(ret_vcc_mat, how='inner')
 

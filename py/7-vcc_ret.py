@@ -68,50 +68,97 @@ if plot_many_sharpe:
 
 ## correlation matrices
 
-# chose dates for corr matrices. userinputchoice
-title_corr = 'Correlation matrix - daily data \n from ' + START2 + ' to ' + END2
+# create tickers corr plots
+tkr_cor1 = tkr_t10now.tolist() + tkr_fin + [r1.name]
+tkr_cor2 = tkr_fin + tkr_t5now.tolist() + [r1.name] # looks assymetric but is correct
 
-# by the way, here is a ret mat given this choice 
-# returns_vol_tbl(df=ret_mat, assets=tkr_sel_blx,
-#                 start=START2, end=END2,
-#                 T=252).to_csv('output/returns_vol_tbl.csv')
+# create ret mat for corr plots
+ret_cor1_mat = ret_fin_mat_withna.\
+  join(ret_vcc_mat_withna[tkr_t10now], how='inner').\
+  join(r1, how='inner')
+assert (ret_cor1_mat.index == r1.index).all()
 
-# todo seaborn does not exists here.
+# create ret mat: fill na with column mean
+ret_cor1_mat_namean = ret_cor1_mat.fillna(ret_cor1_mat.mean())
+
+# create ret mat: go from daily to monthly returns
+ret_cor1_mat_mthly = ret_cor1_mat.resample('MS').sum()
+ret_cor1_mat_namean_mthly = ret_cor1_mat_namean.resample('MS').sum()
+
+# plots
+if CLINUX:
+  plt.style.available
+  with plt.style.context('seaborn-white'):
+
+    # first plot tkr_cor1
+
+    # 1
+    show_corr_plot(df=ret_cor1_mat)
+    plt.savefig('output/vcc/ret/cor-1.png')
+    plt.close()
+
+    # 1 with fillna column mean
+    show_corr_plot(df=ret_cor1_mat_namean)
+    plt.savefig('output/vcc/ret/cor-1-namean.png')
+    plt.close()
+
+    # 1 monthly
+    title1m = 'Correlation matrix \n Monthly data'
+    show_corr_plot(df=ret_cor1_mat_mthly, title=title1m)
+    plt.savefig('output/vcc/ret/cor-1-mthly.png')
+    plt.close()
+
+    # then plot tkr_cor2
+
+    # 2
+    show_corr_plot(df=ret_cor1_mat[tkr_cor2])
+    plt.savefig('output/vcc/ret/cor-2.png')
+    plt.close()
+
+    # 2 with fillna column mean
+    show_corr_plot(df=ret_cor1_mat_namean[tkr_cor2])
+    plt.savefig('output/vcc/ret/cor-2-namean.png')
+    plt.close()
 
 
+## plot correlation over time
 
-# see corr matricesS
-if False:
-  tkr_corr1 = tkr_t10now + tkr_fin + r0.name
-  ret_all_mat = pd.concat([ret_vcc_mat, r0, ret_fin_mat])
-  ret_all_mat_mthly = ret_all_mat.resample('MS').sum()
-  show_corr_plot(tkr_corr1, START2, END2, ret_all_mat)
-  show_corr_plot(tkr_corr1, START2, END2, ret_all_mat_mthly)
-  show_corr_plot(tkr_t10now, START2, END2, ret_all_mat)
-  tkr_corr2 = tkr_fin + tkr_t10now
-  show_corr_plot(tkr_corr2, START2, END2, ret_all_mat)
+# create matrix
+#ret_t10_mat = ret_vcc_mat[tkr_t10now]
 
-## correlation over time
+# create roll corr objet
+cor_cor1_mat = ret_cor1_mat.rolling(365).\
+  corr(ret_t10_mat.BTC).\
+  drop('BTC', axis=1)
+tkr_t10woBTC = tkr_t10now[1:]
+tkr_t5woBTC = tkr_t5now[1:]
 
-# create matrix 
-ret_vcc_mat2 = ret_vcc_mat[tkr_t10now]
 
 # corr over time top 10
-cor90_vcc_mat2 = ret_vcc_mat2.rolling(365).\
-  corr(ret_vcc_mat2.BTC).\
-  drop('BTC', axis=1)
-cor90_vcc_mat2.rolling(20).mean().plot()
+cor_cor1_mat[tkr_t10woBTC].rolling(20).mean().plot()
 plt.ylabel('Correlation vs BTC')
-plt.gca().set_ylim(top=1.01)
+#plt.gca().set_ylim(top=1.01)
 plt.title('Rolling 1y correlation \n All vs BTC')
-plt.savefig('output/vcc/ret/vcc-rollcorr-t10_smooth20.png')
+plt.savefig('output/vcc/ret/cor-roll-t10_smooth20.png')
+plt.close()
 
 # top 5
-tkr_t5woBTC = tkr_t5now[1:]
-cor90_vcc_mat2[tkr_t5woBTC].rolling(20).mean().plot()
+cor_cor1_mat[tkr_t5woBTC].rolling(20).mean().plot()
 plt.ylabel('Correlation vs BTC')
 plt.title('Rolling 1y correlation \n All vs BTC')
-plt.savefig('output/vcc/ret/vcc-rollcorr-t5_smooth20.png')
+plt.savefig('output/vcc/ret/cor-roll-t5_smooth20.png')
+plt.close()
+
+# top 5 + r1
+
+#cor_cor1_mat[tkr_t5woBTC.tolist() + ['t10-wm-rm']].rolling(20).mean().plot()
+cor_cor1_mat[tkr_t5woBTC].rolling(20).mean().plot()
+cor_cor1_mat['t10-wm-rm'].rolling(20).mean().plot(color='black', linewidth=1.5)
+plt.legend()
+plt.ylabel('Correlation vs BTC')
+plt.title('Rolling 1y correlation \n All vs BTC')
+plt.savefig('output/vcc/ret/cor-roll-t5-bl10_smooth20.png')
+plt.close()
 
 
 ## woobull
