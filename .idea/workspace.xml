@@ -4,26 +4,8 @@
     <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="add corr plot with white background. error: NA in .corr()">
       <change afterPath="$PROJECT_DIR$/py/tmp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w0.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/wei_bsk_mat/w9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/object/wei_bsk_mat/w9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/vcc-rollcorr-t10_smooth20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/vcc-rollcorr-t5_smooth20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/0start.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/0start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/1_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/3_f_returns.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/3_f_returns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-0-transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-0-transform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-1-ggbasket.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-1-ggbasket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/5_transform-check-export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/5_transform-check-export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/7-vcc_ret.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/7-vcc_ret.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/1_import_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import_db.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,77 +16,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/1_import.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="175" column="18" selection-start-line="175" selection-end-line="175" selection-end-column="18" />
-              <folding>
-                <element signature="e#3139#4231#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/3_f_returns.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="268" column="28" selection-end-line="292" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/4b-3-ggbasket_transf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/4b-1-ggbasket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="293" column="57" selection-start-line="293" selection-start-column="47" selection-end-line="293" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/4_transform-old.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/0start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-            </state>
+            <state relative-caret-position="-577" />
           </provider>
         </entry>
       </file>
@@ -120,6 +34,27 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/1_import_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py/1_import.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -131,13 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>total_market</find>
-      <find>plot(</find>
-      <find>vcc-rollcorr-t5_smooth20</find>
-      <find>log scale</find>
-      <find>show_corr_plot</find>
-      <find>plt.style</find>
-      <find>with plt.st</find>
       <find>corrplot</find>
       <find>co</find>
       <find>with</find>
@@ -152,7 +80,6 @@
       <find>start</find>
       <find>start=</find>
       <find>startafter</find>
-      <find>with plt.style.context(('seaborn-pastel')):</find>
       <find>tkr_cor1</find>
       <find>plt.close(); plt.clf()</find>
       <find>show_corr</find>
@@ -161,6 +88,14 @@
       <find>cor90_vcc_mat2</find>
       <find>cor90_t10_mat</find>
       <find>linew</find>
+      <find>with plt.style.context(('seaborn-pastel')):</find>
+      <find>date</find>
+      <find>.date</find>
+      <find>dfl_vcc</find>
+      <find>vol_vcc_mat</find>
+      <find>START1</find>
+      <find>coins_top200</find>
+      <find>tkr</find>
     </findStrings>
     <replaceStrings>
       <replace>marketcap</replace>
@@ -181,6 +116,9 @@
       <replace>cor-roll</replace>
       <replace>cor90_t10_mat</replace>
       <replace>cor_cor1_mat</replace>
+      <replace>.cdate</replace>
+      <replace>df</replace>
+      <replace>volume</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -205,11 +143,9 @@
         <option value="$PROJECT_DIR$/py/9-trying_bsk_wei.py" />
         <option value="$PROJECT_DIR$/graph-gallery/pandoc.txt" />
         <option value="$PROJECT_DIR$/graph-gallery/graph-gallery.md" />
-        <option value="$PROJECT_DIR$/py/1_import_db.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_wei.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_ret.py" />
         <option value="$PROJECT_DIR$/py/7-ret_slides.py" />
-        <option value="$PROJECT_DIR$/py/1_import.py" />
         <option value="$PROJECT_DIR$/py/tmp.py" />
         <option value="$PROJECT_DIR$/py/4b-0-transform.py" />
         <option value="$PROJECT_DIR$/py/4b-1-ggbasket.py" />
@@ -217,6 +153,8 @@
         <option value="$PROJECT_DIR$/py/0start.py" />
         <option value="$PROJECT_DIR$/py/3_f_returns.py" />
         <option value="$PROJECT_DIR$/py/7-vcc_ret.py" />
+        <option value="$PROJECT_DIR$/py/1_import_db.py" />
+        <option value="$PROJECT_DIR$/py/1_import.py" />
       </list>
     </option>
   </component>
@@ -526,7 +464,28 @@
       <option name="project" value="LOCAL" />
       <updated>1546486374390</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="set startafter=0 not =365">
+      <created>1546489568903</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1546489568903</updated>
+    </task>
+    <task id="LOCAL-00026" summary="new corr matrix plots.">
+      <created>1546489609519</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1546489609519</updated>
+    </task>
+    <task id="LOCAL-00027" summary="edit">
+      <created>1546490863628</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1546490863628</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="6">
@@ -604,10 +563,12 @@
     <MESSAGE value="add plt.close(); plt.clf()." />
     <MESSAGE value="add cdf plot." />
     <MESSAGE value="add plt.close; plt.clf()" />
-    <MESSAGE value="edit" />
     <MESSAGE value="add corr plot with white background. error: NA in .corr()" />
     <MESSAGE value="rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename" />
+    <MESSAGE value="set startafter=0 not =365" />
+    <MESSAGE value="new corr matrix plots." />
+    <MESSAGE value="edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph-gallery.md" />
@@ -710,26 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/1_import_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO-finplot.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="182">
-            <caret line="286" selection-start-line="286" selection-end-line="286" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/4b-0-transform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -741,23 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/1_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="175" column="18" selection-start-line="175" selection-end-line="175" selection-end-column="18" />
-          <folding>
-            <element signature="e#3139#4231#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,10 +706,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/0start.py">
+    <entry file="file://$PROJECT_DIR$/py/9-bsk_wei.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        <state relative-caret-position="103">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
         </state>
       </provider>
     </entry>
@@ -796,10 +727,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
+    <entry file="file://$PROJECT_DIR$/py/0start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="-577" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO-finplot.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="182">
+            <caret line="286" selection-start-line="286" selection-end-line="286" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/1_import_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/1_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

@@ -90,30 +90,6 @@ if import_long_format:
 
 
 
-if import_wide_format:
-    # read file
-    filepath1 = 'input/CryptoDataWide.csv'
-    df_vcc = pd.read_csv(filepath1, parse_dates=True)
-    dfl_vcc = pd.read_csv(filepath2, parse_dates=True)
-    # i get an error of mixed types. it is merely a warning however.
-    # I tried using pd.read_csv("data.csv", dtype={"CallGuid": np.int64}) but it didnt work
-    # index date
-    df_vcc.set_index('date', inplace=True)
-    df_vcc = re_index_date(df_vcc)
-    # todo hakan, this is needed because pandas complained dates are not regular.
-    # this led the .freq to not be daily which we need!
-    # please double check the data you gave me so that this resampling does not render calculations incorrect.
-    # create matrices: price, marketcap, volume
-    pri_vcc_mat = df_vcc.filter(regex='^open.').fillna(0)
-    mca_vcc_mat = df_vcc.filter(regex='^market.').fillna(0)
-    vol_vcc_mat = df_vcc.filter(regex='^volume.').fillna(0)
-    del df_vcc
-    # rename
-    tkr_vcc = [n.replace('open.', '') for n in pri_vcc_mat.columns]
-    pri_vcc_mat.columns = tkr_vcc
-    mca_vcc_mat.columns = tkr_vcc
-    vol_vcc_mat.columns = tkr_vcc
-
 ## import traditional assets
 
 # financial tickers
