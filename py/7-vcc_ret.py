@@ -121,6 +121,19 @@ if CLINUX:
     plt.close()
 
 
+    # top 10 vcc
+    show_corr_plot(df=ret_cor1_mat_namean[tkr_t10now])
+    plt.savefig('output/vcc/ret/cor-t10now-namean.png')
+    plt.close()
+
+    # top 5 vcc
+    show_corr_plot(df=ret_cor1_mat_namean[tkr_t5now])
+    plt.savefig('output/vcc/ret/cor-t5now-namean.png')
+    plt.close()
+
+
+
+
 ## plot correlation over time
 
 # create matrix

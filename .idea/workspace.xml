@@ -4,90 +4,7 @@
     <list default="true" id="3aa761fc-e6d3-47f2-9e22-f92587389b16" name="Default Changelist" comment="add corr plot with white background. error: NA in .corr()">
       <change afterPath="$PROJECT_DIR$/py/tmp1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.md" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph-gallery/graph-gallery.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/graph-gallery/graph-gallery.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/ACF_btc.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/ACF_btc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/bsk-rollcorr-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/bsk-rollcorr-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/contribution_bsk1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/contribution_bsk1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/contribution_bsk4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/contribution_bsk4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/corr_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/corr_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/pri_bsk_a.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/pri_bsk_a.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/q-q-plot_BTC.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/q-q-plot_BTC.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/q-q-plot_market.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/q-q-plot_market.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/ret_dens_market.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/ret_dens_market.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_beta.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_beta.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_box.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_cdf.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_cdf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_descr_interval.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_descr_interval.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_risk.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_risk.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_rollbeta.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_rollbeta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_rolling_sharpe_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_rolling_sharpe_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_rollvol.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_rollvol.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_violin.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_violin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_yearly_mean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_yearly_mean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/retmat1_yearly_vol.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/retmat1_yearly_vol.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/ret/sharpe_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/ret/sharpe_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches1minus4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches1minus4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches8.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1_minus_bsk4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1_minus_bsk4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1_minus_bsk4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/coinswitches_bsk1_minus_bsk4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/mcafr_bsk1bsk4_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/member_sum_wei_t10-wm-rm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/member_sum_wei_t10-wm-rm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/member_sum_wei_t5-wm-rm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/member_sum_wei_t5-wm-rm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/nrof_coinsw_w1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/nrof_coinsw_w1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/smoothing_1_larger.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/smoothing_1_larger.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/smoothing_1_smaller.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/smoothing_1_smaller.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/smoothing_w1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/tkr_insouts_mostwei_sum.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/tkr_insouts_mostwei_sum.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/turnover_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/turnover_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/turnover_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/turnover_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/volume_5vs10_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/volume_5vs10_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w smooth minus w raw, abs(mean()).csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w smooth minus w raw, abs(mean()).csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w1_alts.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w1_alts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w1_area.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w1_area.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w4-1m_alts.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w4-1m_alts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w4-w1_area.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w4-w1_area.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w4_alts.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w4_alts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w4_area.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w4_area.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/w4_minusw_1m_mean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/w4_minusw_1m_mean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/wd1_tkr_insouts_mostwei.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/wd1_tkr_insouts_mostwei.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/wd_mean.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/wd_mean.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/wei_mthly_t10-wm-rm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/wei_mthly_t10-wm-rm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/bsk/wei/wei_mthly_t5-wm-rm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/bsk/wei/wei_mthly_t5-wm-rm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/ret_t10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/ret_t10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/retvol_t5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/retvol_t5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/mca/mca_vcc.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/mca/mca_vcc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/mca/mca_vcc_bsk1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/mca/mca_vcc_bsk1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-1-mthly.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-1-mthly.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-1-namean.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-1-namean.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-2-namean.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-2-namean.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t10_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t10_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t5-bl10_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t5-bl10_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t5_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/cor-roll-t5_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/pri_t5.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/pri_t5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/pri_tkr3_market.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/pri_tkr3_market.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/price-fund_vs_coins.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/price-fund_vs_coins.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/retvol_scatter_text.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/retvol_scatter_text.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/total_marketcap.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/total_marketcap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/total_marketcap_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/total_marketcap_log.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/ret/woobull.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/ret/woobull.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/vol/vol_vcc_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/vol/vol_vcc_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/vol/volfr_vcc_bsk1_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/vol/volfr_vcc_bsk1_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/vcc/vol/volfr_vcc_smooth20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/vcc/vol/volfr_vcc_smooth20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/0_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/0_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/0start.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/0start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/1_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/1_import_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/1_import_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/4b-0-transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/4b-0-transform.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/7-vcc_ret.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/7-vcc_ret.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/7-vcc_vol.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/7-vcc_vol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/9-bsk_ret.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/9-bsk_ret.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,13 +26,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/7-vcc_vol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+            <state relative-caret-position="373">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
@@ -145,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+            <state relative-caret-position="19">
+              <caret line="88" selection-start-line="88" selection-end-line="133" />
             </state>
           </provider>
         </entry>
@@ -204,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>plt.close(); plt.clf()</find>
       <find>show_corr</find>
       <find>ret_vcc_mat2</find>
       <find>vcc-rollcorr</find>
@@ -234,6 +150,7 @@
       <find>turnover</find>
       <find>plot(</find>
       <find>violin</find>
+      <find>cor-2</find>
     </findStrings>
     <replaceStrings>
       <replace>marketcap</replace>
@@ -287,7 +204,6 @@
         <option value="$PROJECT_DIR$/py/4b-1-ggbasket.py" />
         <option value="$PROJECT_DIR$/py/4b-3-ggbasket_transf.py" />
         <option value="$PROJECT_DIR$/py/3_f_returns.py" />
-        <option value="$PROJECT_DIR$/py/7-vcc_ret.py" />
         <option value="$PROJECT_DIR$/py/tmp1.py" />
         <option value="$PROJECT_DIR$/py/0_lib.py" />
         <option value="$PROJECT_DIR$/py/4b-0-transform.py" />
@@ -297,6 +213,7 @@
         <option value="$PROJECT_DIR$/graph-gallery/graph-gallery.md" />
         <option value="$PROJECT_DIR$/py/7-vcc_vol.py" />
         <option value="$PROJECT_DIR$/py/9-bsk_ret.py" />
+        <option value="$PROJECT_DIR$/py/7-vcc_ret.py" />
       </list>
     </option>
   </component>
@@ -634,7 +551,28 @@
       <option name="project" value="LOCAL" />
       <updated>1546490914908</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="edit vol plot">
+      <created>1546494890469</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1546494890469</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add vol plot.">
+      <created>1546494905792</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1546494905792</updated>
+    </task>
+    <task id="LOCAL-00031" summary="edits. export plots.">
+      <created>1546494924911</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1546494924911</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="6">
@@ -693,9 +631,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rename folder py2 to py" />
-    <MESSAGE value="connect to db (but it fails)" />
-    <MESSAGE value="edit download" />
     <MESSAGE value="minor edit tufte" />
     <MESSAGE value="create object/ and add files by running scripts." />
     <MESSAGE value="minor edit" />
@@ -718,7 +653,10 @@
     <MESSAGE value="new corr matrix plots." />
     <MESSAGE value="edit" />
     <MESSAGE value="remove option to import from wide format." />
-    <option name="LAST_COMMIT_MESSAGE" value="remove option to import from wide format." />
+    <MESSAGE value="edit vol plot" />
+    <MESSAGE value="add vol plot." />
+    <MESSAGE value="edits. export plots." />
+    <option name="LAST_COMMIT_MESSAGE" value="edits. export plots." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/graph-gallery.md" />
@@ -885,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/4b-4-ggbasket_check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -916,17 +847,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/7-vcc_vol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/9-bsk_ret.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/7-vcc_vol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/7-vcc_ret.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="88" selection-start-line="88" selection-end-line="133" />
         </state>
       </provider>
     </entry>
