@@ -54,13 +54,3 @@ if not online_download:
     pri_fin_mat = pri_fin_mat.loc[START0:END0]
     vol_fin_mat = vol_fin_mat.loc[START0:END0]
 
-## create returns matrices
-
-ret_vcc_mat = price2return(pri_vcc_mat, fill_na_0=True)
-ret_fin_mat = price2return(pri_fin_mat, fill_na_0=True)
-
-# Corr matrix will include the missing values
-ret_vcc_mat_withna = price2return(pri_vcc_mat, fill_na_0=False)
-ret_fin_mat_withna = price2return(pri_fin_mat, fill_na_0=False)
-ret_fin_mat_withna.isnull().sum().sum()
-ret_vcc_mat_withna[['BTC', 'ETH', 'XRP', 'LTC']].isnull().sum().sum()
