@@ -8,8 +8,10 @@ and others.
 
 ## files and folders
 
-def text_export(object, file, description='', folder='output/'):
+def text_export(object, file, description=None, folder='output/'):
   filepath = folder + file + '.txt'
+  if description == None:
+      description = ''
   with open(filepath, "w") as text_file:
     text_file.write(description + "\n \n" + str(object))
 
@@ -119,13 +121,13 @@ def retvol(retmat):
   return df_ret_vol
 
 
-def returns_interval(returns_matrix, assets='', T=365):
+def returns_interval(returns_matrix, assets=None, T=365):
   """start with rr since it contains fund and coins returns.
   T=12 for monthly data and T=365 for daily data.
   output returnstable for a certain period.
   """
   # default choice
-  if assets=='':
+  if assets==None:
     assets = returns_matrix.columns
   # calc mean and vol
   ret = returns_matrix.mean() * T
@@ -140,10 +142,10 @@ def returns_interval(returns_matrix, assets='', T=365):
   return tbl.round(4)
 
 def sortino_vec(ret_vec, target=0, T=365):
-   '''
+   """
    input pandas series and target annual return. output its sortino ratio.
    https://en.wikipedia.org/wiki/Sortino_ratio
-   '''
+   """
 
    mean = ret_vec.mean() * T - target
    vol = ret_vec[ret_vec < target].std() * np.sqrt(T)
@@ -158,13 +160,13 @@ def sortino(ret_mat, target=0, T=365):
 def information_ratio(returns_mat, benchmark,
                       freq='daily', showall=False,
                       riskfree=0, decimals=4):
-  '''
+  """
   https://en.wikipedia.org/wiki/Information_ratio
 
   information ratio is like sharpe ratio but data is not returns but instead returns minus benchmark returns. we use BTC as the default benchmark.
 
   It is <=> to active return divided by tracking error.
-  '''
+  """
   returns_bench_vec = returns_mat[benchmark]
   returns_minus_bench = returns_mat.subtract(returns_bench_vec, axis=0)
   out = sharpe(returns_minus_bench,
@@ -182,9 +184,9 @@ def information_ratio(returns_mat, benchmark,
 
 def tracking_error(returns_mat, benchmark,
                    freq='daily', decimals=4):
-  '''
+  """
   https://en.wikipedia.org/wiki/Tracking_error
-  '''
+  """
   if freq == 'daily':
     T=365
   if freq == 'monthly':
@@ -262,22 +264,22 @@ txt_daterange = START1 + ' to ' + END1
 title_corr = 'Correlation matrix - daily data \n from ' + txt_daterange
 
 def show_corr_plot(df,
-                   start='', end='',
-                   cols='', title='Correlation matrix'):
+                   start=None, end=None,
+                   cols=None, title='Correlation matrix'):
     """
     input a return matrix df (eg monthly or daily returns)
     slice the df by startdate, enddate and columns.
     output a correlation matrix plot.
     """
     # set dates
-    if start=='':
+    if start==None:
       start = df.index[0]
-    if end=='':
+    if end==None:
       end = df.index[-1]
     # default cols
-    if cols=='':
+    if cols==None:
       cols = df.columns
-    if title=='':
+    if title==None:
       'Correlation matrix' # on daily data
     # plot
     corr_mat = df.loc[start:end, cols].corr()
@@ -285,7 +287,7 @@ def show_corr_plot(df,
     plt.title(title)
     # then use plt.show() or .savefig and .close
 
-def show_rollcorr_plot(cor_mat, cols, legend=False, title=''):
+def show_rollcorr_plot(cor_mat, cols, legend=False, title=None):
     cor_mat[cols].plot(legend=legend)
     plt.ylabel('Correlation vs BTC')
     plt.title(title)
