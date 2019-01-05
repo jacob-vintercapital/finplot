@@ -139,14 +139,3 @@ plt.ylabel('USD')
 plt.gca().set_ylim(bottom=BOTTOM, top=TOP)
 plt.savefig('output/vcc/ret/pri_portfolios_2.png')
 plt.close(); plt.clf()
-
-
-
-## corr
-
-# 5+1+5+1=12 st cols is max i think
-tkr_t5hist
-
-tkr_t5hist
-tkr_sp500_top5 = ['AAPL', 'MSFT', 'AMZN', 'JNJ', 'JPM']
-

@@ -133,7 +133,8 @@ tkr_t5now = w4.iloc[-1].nlargest(5).index
 tkr_t10hasbeen = w1.columns[w1.sum()>0]
 tkr_t5hasbeen = w4.columns[w4.sum()>0]
 # largest historical weights in the top10 fund
-tkr_t5hist = w1.sum().nlargest(5).index
+tkr_t10hist = w1.sum().nlargest(10).index
+tkr_t5hist  = w1.sum().nlargest(5).index
 # assert top5 historical is the same for both top10 and top5 baskets
 assert (tkr_t5hist == w4.sum().nlargest(5).index).all()
 

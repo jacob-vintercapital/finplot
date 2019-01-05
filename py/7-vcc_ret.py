@@ -192,3 +192,59 @@ plt.ylabel('USD value after $100 investment \n on the day it first appears on co
 plt.savefig('output/vcc/ret/woobull.png')
 # todo: now edit the transpancy, see url:
 # https://stackoverflow.com/questions/51841146/time-series-plot-of-assets-change-transparency-based-on-another-matrix
+
+## corr matrices for part i and part ii in whitepaper
+
+# example of ticker lists to use
+tkr_t5hist
+tkr_t10hist
+tkr_sp10
+tkr_sp5
+tkr_fin
+['Stocks', 'Bonds', 'Gold']
+['SP500', 'Bonds', 'Gold']
+
+# create a ret mat with all tickers of interest available
+tkr_cor3 = tkr_t10hist + tkr_sp10 + ['BL10'] + ['SP500', 'Bonds']
+ret_cor3_mat = pd.concat([ret_vcc_mat[tkr_t10hist],
+                          ret_sp10_mat,
+                          r1,
+                          ret_fin_mat[['Stocks', 'Bonds']] # or 'SP500' not sure with naming now...
+                          ], axis=1)
+ret_cor3_mat.columns = tkr_cor3
+# iff pd.concat does not work try .join how='inner'
+#ret_cor3_mat = ret_vcc_mat[tkr_t10hist].join( sp10 ).join( bl10 ).join( sp500 )
+
+# create new cols for TRD and BAL
+ret_cor3_mat['TRD'] = 0.60 * ret_cor3_mat['SP500'] + 0.40 * ret_cor3_mat['Bonds']
+ret_cor3_mat['BAL'] = 0.95 * ret_cor3_mat['TRD'] + 0.05 * ret_cor3_mat['BL10']
+tkr_cor3 = tkr_cor3 + ['TRD', 'BAL']
+
+# plot all that are of interest, select which ones later
+plt.close('all')
+# part i
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t5hist)
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t10hist)
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t5hist + ['BL10'])
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_sp5)
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_sp10)
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_sp10 + ['SP500'])
+plt.show()
+# part ii
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t5hist + tkr_sp5 + ['BL10'] + ['SP500'])
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t10hist + tkr_sp10 + ['BL10'] + ['SP500'])
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=tkr_t5hist[0:3] + tkr_sp5[0:3] + ['BL10'] + ['SP500'])
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=)
+plt.show()
+show_corr_plot(df=ret_cor3_mat, cols=)
+plt.show()
+# when done watching them: close all windows
+plt.close('all')
